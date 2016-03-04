@@ -65,6 +65,9 @@ public class GameActivity extends MyActivity {
 
         // init
         infoBtn.setSelected(true);
+        MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
+        myCanvas.setGame(new Game(R.color.first_game));
+        myCanvas.postInvalidate();
         Bundle extras = getIntent().getExtras();
         chosenGame = extras.getInt("CHOSEN_GAME");
         chosenLevel = extras.getInt("CHOSEN_LEVEL");

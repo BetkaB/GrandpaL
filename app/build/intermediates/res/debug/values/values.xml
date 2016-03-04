@@ -118,6 +118,12 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="progressBarEmpty">#ffffffff</color>
+    <color name="progressBarStroke">#444444</color>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->

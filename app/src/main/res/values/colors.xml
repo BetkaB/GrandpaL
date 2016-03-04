@@ -10,6 +10,8 @@
     <color name="leftMenuStroke">#444444</color>
     <color name="screenTitle">#444444</color>
     <color name="infoRowTitle">#444444</color>
+    <color name="progressBarStroke">#444444</color>
+    <color name="progressBarEmpty">#ffffffff</color>
 
 
 </resources>
