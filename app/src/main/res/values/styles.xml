@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="LeaveButton" parent="LeftMenuButton">
+        <item name="android:layout_marginBottom">@dimen/left_menu_leave_bottom</item>
+        <item name="android:layout_gravity">bottom|center_vertical</item>
+        <item name="android:src">@drawable/leave</item>
+    </style>
+
+    <style name="LeftMenuButton" parent="Widget.AppCompat.ImageButton">
+      <item name="android:background">@drawable/left_menu_selector_game1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/left_menu_buttons_margin</item>
+    </style>
+
+    <style name="HelpButton" parent="LeftMenuButton">
+        <item name="android:src">@drawable/mouseicon</item>
+    </style>
+
+    <style name="ResultsButton" parent="LeftMenuButton">
+        <item name="android:src">@drawable/help</item>
+    </style>
+
+    <style name="GameButton" parent="LeftMenuButton">
+        <item name="android:src">@drawable/info</item>
+    </style>
+
+    <style name="ScreenTitle" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">@color/screenTitle</item>
+        <item name="android:layout_marginTop">@dimen/screen_title_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/screen_title_bottom_margin</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="InfoRowText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/left_menu_width</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+
+    </style>
+
+    <style name="InfoRowTitle" parent="InfoRowText">
+        <item name="android:textColor">@color/infoRowTitle</item>
+        <item name="android:layout_marginTop">@dimen/info_row_title_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/info_row_title_bottom_margin</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+
+
+
+    <style name="MainMenuRow" >
+        <item name="android:background">@drawable/rounded_row</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ScoreGrid">
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_marginLeft">@dimen/score_row_margin_left_and_right</item>
+        <item name="android:layout_marginRight">@dimen/score_row_margin_left_and_right</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="CreateLevelRow">
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_marginLeft">@dimen/score_row_margin_left_and_right</item>
+        <item name="android:layout_marginRight">@dimen/score_row_margin_left_and_right</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@drawable/rounded_row</item>
+
+
+    </style>
+
+    <style name="ScoreText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/screenTitle</item>
+        <item name="android:textSize">30sp</item>
+
+    </style>
+
+    <style name="ScoreGameName" parent="ScoreText">
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="ScoreGamePoints" parent="ScoreText">
+        <item name="android:layout_gravity">center_vertical|right</item>
+    </style>
+
+
+
+
+</resources>

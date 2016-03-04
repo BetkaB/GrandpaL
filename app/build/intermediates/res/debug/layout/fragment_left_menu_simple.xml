@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/left_menu_width"
+    android:layout_height="match_parent"
+    tools:context="com.example.beebzb.bakalarka.LeftMenuSimpleFragment"
+    android:orientation="horizontal"
+    android:background="@color/leftMenu">
+
+    <ImageButton style="@style/LeaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leaveBtn" />
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/layout/fragment_left_menu_simple.xml -->

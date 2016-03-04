@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.beebzb.bakalarka.ChooseLevelActivity">
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:name="com.example.beebzb.bakalarka.LeftMenuSimpleFragment"
+        android:id="@+id/fragment2" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView style="@style/ScreenTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_choose_level"
+            android:id="@+id/textView2" />
+
+        <AbsoluteLayout
+            android:layout_marginBottom="@dimen/activity_choose_level_abs_top_bottom"
+            android:layout_marginTop="@dimen/activity_choose_level_abs_top_bottom"
+            android:layout_width="match_parent"
+            android:id="@+id/rel"
+            android:layout_height="match_parent"></AbsoluteLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

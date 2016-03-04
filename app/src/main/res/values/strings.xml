@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Zvieratá deda Lesoňa</string>
+    <string name="game_1">Kto vyhrá?</string>
+    <string name="game_2">Kto chýba?</string>
+    <string name="game_3">Váhy</string>
+    <string name="game_4">Dve stratené zvieratá</string>
+    <string name="game_custom">Vlastný level pre hru %s</string>
+    <string name="game">Hra</string>
+    <string-array name="game_1_text">
+        <item>Vyber znamienko a vyjadri tak či sú obe strany rovnako silné.</item>
+        <item>Ktorá strana je silnejšia? Ak sú strany rovnako silné, vyber znamienko rovná sa ( = ).</item>
+        <item>Ktorá strana je silnejšia? V tejto úrovni sa stretneš aj so zvieratami krava a kôň. </item>
+    </string-array>
+    <string-array name="game_2_text">
+        <item>Vyber zviera tak, aby platila nerovnosť.</item>
+        <item>Vyber zviera tak, aby platila rovnosť.</item>
+        <item>Vyber zviera tak, aby platila rovnosť. V tejto úrovni sa stretneš aj so zvieratami krava a kôň.</item>
+    </string-array>
+
+    <string-array name="game_3_text">
+        <item>Rozdeľ zvieratá tak, aby v oboch ohradách boli rovnako silné skupiny.</item>
+        <item>Rozdeľ zvieratá tak, aby vo všetkých troch ohradách boli rovnako silné skupiny.</item>
+        <item>Rozdeľ zvieratá tak, aby vo všetkých štyroch ohradách boli rovnako silné skupiny.</item>
+    </string-array>
+
+    <string-array name="game_4_text">
+        <item>Uhádni aké zviera sa skrýva za maskou.</item>
+        <item>Uhádni aké zvieratá sa skrývajú za maskami. Hľadáš teda 2 zvieratá.</item>
+        <item>Uhádni aké zvieratá sa skrývajú za maskami. Hľadáš teda 2 zvieratá. V tejto úrovni sa stretneš aj so zvieratami krava a kôň.</item>
+    </string-array>
+
+    <string-array name="game_custom_text">
+        <item>Teraz hráš vlastný level pre hru <b>Kto vyhrá? </b>. Vyber znamienko a vyjadri, ktorá strana je silnejšia.</item>
+        <item>Teraz hráš vlastný level pre hru <b>Kto chýba? </b>. Vyber zviera tak, aby platila rovnosť.</item>
+        <item>Teraz hráš vlastný level pre hru <b>Váhy</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
+        <item>Teraz hráš vlastný level pre hru <b>Dve stratené zvieratá</b>. Uhádni aké zvieratá sa skrývajú za maskami.</item>
+
+    </string-array>
+
+    <string name="score">Body</string>
+
+    <string name="game_activity_solutions">Riešenie</string>
+    <string name="game_activity_help">Legenda</string>
+    <string name="play">Hraj</string>
+
+
+
+    <string name="title_activity_create_level"><u>Vytvor si nový level</u></string>
+    <string name="title_activity_choose_level"><u>Výber levelu</u></string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="title_activity_score"><u>Skóre</u></string>
+    <string name="title_activity_editor_first_game">EditorFirstGameActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game">GameActivity</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_game_activity2">GameActivity2</string>
+
+</resources>

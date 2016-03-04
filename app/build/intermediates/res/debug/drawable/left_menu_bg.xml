@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="2dip"
+        android:color="@color/leftMenuStroke" />
+    <solid
+        android:color="@color/leftMenu"/>
+</shape><!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/drawable/left_menu_bg.xml -->

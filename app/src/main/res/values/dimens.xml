@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_choose_level_abs_top_bottom">5dp</dimen>
+    <dimen name="left_menu_width">90dp</dimen>
+    <dimen name="left_menu_leave_bottom">10dp</dimen>
+    <dimen name="menu_buttons_radius">150px</dimen>
+    <dimen name="menu_buttons_size">120px</dimen>
+    <dimen name="screen_title_top_margin">10dp</dimen>
+
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="debugging">#9def00f0</color>
+    <color name="first_game">#FFC3AE</color>
+    <color name="second_game">#CBE8BA</color>
+    <color name="third_game">#C9F1FD</color>
+    <color name="fourth_game">#FEF8A0</color>
+    <color name="primaryText">#444444</color>
+    <color name="leftMenu">#444444</color>
+    <color name="leftMenuStroke">#444444</color>
+    <color name="screenTitle">#444444</color>
+    <color name="infoRowTitle">#444444</color>
+
+
+</resources>

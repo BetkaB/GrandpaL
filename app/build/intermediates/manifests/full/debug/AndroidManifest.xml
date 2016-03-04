@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.beebzb.bakalarka"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.beebzb.bakalarka.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.ScoreActivity"
+            android:label="@string/title_activity_score" >
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.CreateLevelActivity"
+            android:label="@string/title_activity_create_level" >
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.ChooseLevelActivity"
+            android:label="@string/title_activity_choose_level" >
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.MyActivity"
+            android:label="@string/title_activity_my" >
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.EditorFirstGameActivity"
+            android:label="@string/title_activity_editor_first_game" >
+        </activity>
+        <activity
+            android:name="com.example.beebzb.bakalarka.GameActivity"
+            android:label="@string/title_activity_game" >
+        </activity>
+    </application>
+
+</manifest>

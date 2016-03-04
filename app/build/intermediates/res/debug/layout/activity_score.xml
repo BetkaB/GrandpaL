@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.beebzb.bakalarka.ScoreActivity">
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:name="com.example.beebzb.bakalarka.LeftMenuSimpleFragment"
+        android:id="@+id/fragment" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView style="@style/ScreenTitle"
+            android:text="@string/title_activity_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sd" />
+
+        <GridLayout style="@style/ScoreGrid"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+
+            android:columnCount="2"
+            android:id="@+id/g0">
+
+            <TextView style="@style/ScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game"
+                android:id="@+id/textView3" />
+
+            <TextView style="@style/ScoreGamePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:id="@+id/textView4"
+                android:gravity="right" />
+        </GridLayout>
+
+        <GridLayout style="@style/ScoreGrid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/score_row_height"
+            android:rowCount="1"
+            android:background="@color/first_game"
+            android:columnCount="3"
+            android:id="@+id/g1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1"
+                android:src="@drawable/game1"
+                android:layout_gravity="center_vertical" />
+
+            <TextView style="@style/ScoreGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_1"
+                android:id="@+id/gamename1" />
+
+            <TextView style="@style/ScoreGamePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/gamescore1"
+                />
+        </GridLayout>
+
+        <GridLayout style="@style/ScoreGrid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/score_row_height"
+            android:background="@color/second_game"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:id="@+id/g2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/game2"
+                android:layout_gravity="center_vertical" />
+
+            <TextView style="@style/ScoreGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/game_2"
+                android:id="@+id/gamename2" />
+
+            <TextView style="@style/ScoreGamePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/gamescore2" />
+        </GridLayout>
+
+        <GridLayout style="@style/ScoreGrid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/score_row_height"
+            android:rowCount="1"
+            android:background="@color/third_game"
+            android:columnCount="3"
+            android:id="@+id/g3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:src="@drawable/game3"/>
+
+            <TextView style="@style/ScoreGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/game_3"
+                android:id="@+id/gamename3" />
+
+            <TextView style="@style/ScoreGamePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/gamescore3" />
+        </GridLayout>
+
+        <GridLayout style="@style/ScoreGrid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/score_row_height"
+            android:background="@color/fourth_game"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:id="@+id/g4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@drawable/game4"/>
+
+            <TextView style="@style/ScoreGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/game_4"
+                android:id="@+id/gamename4" />
+
+            <TextView style="@style/ScoreGamePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/gamescore4" />
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/layout/activity_score.xml -->
