@@ -2,13 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/left_menu_width"
     android:layout_height="match_parent"
-    tools:context="com.example.beebzb.bakalarka.LeftMenuSimpleFragment"
+    android:background="@color/leftMenu"
     android:orientation="horizontal"
-    android:background="@color/leftMenu">
+    tools:context="com.example.beebzb.bakalarka.layout.LeftMenuSimpleFragment">
 
-    <ImageButton style="@style/LeaveButton"
+    <ImageButton
+        android:id="@+id/leaveBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/leaveBtn" />
+        android:background="@null"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_marginRight="@dimen/left_menu_buttons_margin"
+        android:src="@drawable/leave" />
 
 </LinearLayout>

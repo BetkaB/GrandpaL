@@ -1,6 +1,7 @@
 package com.example.beebzb.bakalarka;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -12,6 +13,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.beebzb.bakalarka.entity.Game;
 
 
 public class GameActivity extends MyActivity {
@@ -37,11 +40,15 @@ public class GameActivity extends MyActivity {
     private int[] chosenIcons;
     private String gameName;
     private String colorStr;
+    private int colorInt;
     private int selectorIndex;
 
     // -------- constants --------
     private String solutions;
     private String help;
+
+    // Game
+    Thread thread;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -64,16 +71,16 @@ public class GameActivity extends MyActivity {
 
 
         // init
-        infoBtn.setSelected(true);
-        MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
-        myCanvas.setGame(new Game(R.color.first_game));
-        myCanvas.postInvalidate();
         Bundle extras = getIntent().getExtras();
         chosenGame = extras.getInt("CHOSEN_GAME");
         chosenLevel = extras.getInt("CHOSEN_LEVEL");
+        infoBtn.setSelected(true);
+
+
         if (chosenGame == 0) {
             chosenIcons = Constants.gameIcons;
             colorStr = Constants.gameColors[chosenLevel - 1];
+            colorInt = Constants.gameColorsInt[chosenLevel - 1];
             selectorIndex = chosenLevel - 1;
             String levelName = getResources().getString(Constants.gameTitles[chosenLevel]);
             gameName = getResources().getString(Constants.gameTitles[chosenGame], levelName);
@@ -82,11 +89,16 @@ public class GameActivity extends MyActivity {
         } else {
             chosenIcons = Constants.levelIcons;
             colorStr = Constants.gameColors[chosenGame - 1];
+            colorInt = Constants.gameColorsInt[chosenGame - 1];
             selectorIndex = chosenGame - 1;
             gameName = getResources().getString(Constants.gameTitles[chosenGame]);
 
 
         }
+
+        final MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
+        myCanvas.setGame(new Game(colorInt, getBaseContext(), chosenGame, chosenLevel, myCanvas, this));
+        myCanvas.postInvalidate();
 
 
         setSelector();
@@ -106,7 +118,52 @@ public class GameActivity extends MyActivity {
         Log.e("LEFT_MENU", "GAME INFO " + gameInfo[1]);
         Log.e("LEFT_MENU", "GAME name " + gameName);
 
+
+        // Thread
+
+        thread = new Thread() {
+            @Override
+            public void run() {
+                long lastLoopTime = System.nanoTime();
+                final int TARGET_FPS = 60;
+                final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
+                long lastFpsTime = 0;
+
+
+                try {
+                    while (true) {
+                        Log.e("THREAD","run");
+                        long sleepTime = 0;
+                        long now = System.nanoTime();
+                        long updateLength = now - lastLoopTime;
+                        lastLoopTime = now;
+                        double delta = updateLength / ((double) OPTIMAL_TIME);
+
+
+                        lastFpsTime += updateLength;
+                        if (lastFpsTime >= 999999) {
+                            lastFpsTime = 0;
+                        }
+
+                        myCanvas.updateDelta(delta);
+                        myCanvas.postInvalidate();
+
+                        sleepTime = (lastLoopTime - System.nanoTime() + OPTIMAL_TIME) / 1000000;
+                        sleep(sleepTime);
+
+
+                        //handler.post(this);
+                    }
+                } catch (InterruptedException e) {
+                    Log.e("THREAD","interupted");
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        thread.start();
     }
+
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void setSelector() {
@@ -155,7 +212,17 @@ public class GameActivity extends MyActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (thread != null){
+            thread.interrupt();
+        }
+    }
+
     public void showLevelInfo(String title, String text, int idLevel) {
+        this.title.setVisibility(View.VISIBLE);
         this.text.setVisibility(View.VISIBLE);
         this.helpImView.setVisibility(View.GONE);
         this.title.setText(title);
@@ -164,6 +231,7 @@ public class GameActivity extends MyActivity {
     }
 
     public void showSolutionInfo() {
+        title.setVisibility(View.VISIBLE);
         this.text.setVisibility(View.VISIBLE);
         this.helpImView.setVisibility(View.GONE);
         this.title.setText(solutions);
@@ -171,6 +239,7 @@ public class GameActivity extends MyActivity {
     }
 
     public void showHelp() {
+        title.setVisibility(View.GONE);
         this.title.setText(help);
         this.text.setVisibility(View.GONE);
         this.helpImView.setVisibility(View.VISIBLE);

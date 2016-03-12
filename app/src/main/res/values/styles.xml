@@ -6,10 +6,10 @@
     </style>
 
     <style name="LeaveButton" parent="LeftMenuButton">
-        <item name="android:layout_marginBottom">@dimen/left_menu_leave_bottom</item>
         <item name="android:layout_gravity">bottom|center_vertical</item>
         <item name="android:src">@drawable/leave</item>
     </style>
+
 
     <style name="LeftMenuButton" parent="Widget.AppCompat.ImageButton">
       <item name="android:background">@drawable/left_menu_selector_game1</item>

@@ -1,10 +1,12 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.layout;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.widget.ImageButton;
+
+import com.example.beebzb.bakalarka.R;
 
 public class MenuImageButton extends ImageButton {
 

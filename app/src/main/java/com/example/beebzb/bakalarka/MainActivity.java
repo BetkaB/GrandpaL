@@ -2,8 +2,10 @@ package com.example.beebzb.bakalarka;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,13 +21,28 @@ import java.util.HashMap;
 
 public class MainActivity extends MyActivity {
     private HashMap<Integer, Class > actvities = new HashMap<Integer,Class>();
-
+    SharedPreferences preferences = null;
+    public static final String PREFERENCES_NAME = "PREFERENCES";
+    public static final String SCORE_GAME1 = "GAME1";
+    public static final String SCORE_GAME2 = "GAME2";
+    public static final String SCORE_GAME3 = "GAME3";
+    public static final String SCORE_GAME4 = "GAME4";
+    private final String FIRST_RUN = "isFirstRun";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initActivities();
+        boolean isFirstRun = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean(FIRST_RUN, true);
+        if (isFirstRun){
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putBoolean(FIRST_RUN, false).commit();
+
+        }
+    }
+
+    private void initActivities() {
         actvities.put(R.id.playBtn, ChooseLevelActivity.class);
         actvities.put(R.id.createBtn,CreateLevelActivity.class);
         actvities.put(R.id.scoreBtn, ScoreActivity.class);

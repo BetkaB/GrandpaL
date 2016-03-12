@@ -1,9 +1,9 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.layout;
 
 import android.graphics.Path;
 import android.graphics.RectF;
 
-class MyRoundedRect {
+public class MyRoundedRect {
     public static Path RoundedRect(
             RectF rectF, float rx, float ry,
             boolean tl, boolean tr, boolean br, boolean bl
