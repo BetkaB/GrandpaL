@@ -66,13 +66,10 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="TASK" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af3da90b-17a6-4074-be3b-662e83b7aaeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Operation.java" />
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\classes\debug\com\example\beebzb\bakalarka\Animal.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\classes\debug\com\example\beebzb\bakalarka\Game.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\classes\debug\com\example\beebzb\bakalarka\MenuImageButton.class" afterPath="" />
@@ -81,65 +78,42 @@
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\classes-82e00b97f046da8f3369e540ce84fac68b2113d1.jar" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-9fc3bf91614cebf421c1d14d8b456460e2c01500.jar" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-a251b75a5ef6f265d22ca5bee22db19401679737.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\Animal.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\Game.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\LeftMenuSimpleFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/layout/LeftMenuSimpleFragment.java" />
-      <change type="MOVED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\MenuImageButton.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/layout/MenuImageButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\MyRoundedRect.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/layout/MyRoundedRect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$1.class" />
+      <change type="MOVED" beforePath="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\java\com\example\beebzb\bakalarka\entity\Game.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/enums/Animal.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/enums/Animal.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ChooseLevelActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/Constants.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Game.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/GameActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/GameActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/GameActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/GameActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Generator.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Generator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/MyCanvas.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/MyCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$mipmap.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ScoreActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/ScoreActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Solver.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Solver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Task.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/beebzb/bakalarka/entity/Task.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/cow.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/cow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cow.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cow.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/leave.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/leave.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/leave.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/leave.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ChooseLevelActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ChooseLevelActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Generator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Generator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/beebzb/bakalarka/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/beebzb/bakalarka/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ScoreActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ScoreActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_choose_level.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_choose_level.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_choose_level.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_choose_level.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_create_level.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_create_level.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_level.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_level.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Task.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Task.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_score.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/activity_score.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/fragment_left_menu_simple.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/fragment_left_menu_simple.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_left_menu_simple.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_left_menu_simple.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -169,12 +143,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java">
+      <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7197581">
-              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.5148064">
+              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+              <folding>
+                <element signature="e#9024#9025#0" expanded="true" />
+                <element signature="e#9065#9066#0" expanded="true" />
+                <element signature="e#9098#9099#0" expanded="true" />
+                <element signature="e#9136#9137#0" expanded="true" />
+                <element signature="e#9175#9176#0" expanded="true" />
+                <element signature="e#9223#9224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyCanvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,30 +176,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#618#619#0" expanded="false" />
-                <element signature="e#646#647#0" expanded="false" />
-                <element signature="e#680#681#0" expanded="false" />
-                <element signature="e#711#712#0" expanded="false" />
-                <element signature="e#964#965#0" expanded="false" />
-                <element signature="e#1021#1022#0" expanded="false" />
-                <element signature="e#1072#1073#0" expanded="false" />
-                <element signature="e#1127#1128#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -215,10 +186,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -229,7 +198,34 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding>
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1615#1616#0" expanded="true" />
+                <element signature="e#1672#1673#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1545,18 +1541,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_left_menu_simple.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/layout/MyRoundedRect.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ScoreActivity.java" />
         <option value="$USER_HOME$/workspace/uloha4/src/Formula.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Circle.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Task.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa0.864/Vstup.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Solver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Generator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ChooseLevelActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java" />
       </list>
     </option>
@@ -1593,6 +1591,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1744,9 +1745,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1965,33 +1963,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2857143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21371429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39542857" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46057144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55314285" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23314285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3112128" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53485715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15989305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17219251" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2041,13 +2039,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2058,11 +2049,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#9024#9025#0" expanded="true" />
+            <element signature="e#9065#9066#0" expanded="true" />
+            <element signature="e#9098#9099#0" expanded="true" />
+            <element signature="e#9136#9137#0" expanded="true" />
+            <element signature="e#9175#9176#0" expanded="true" />
+            <element signature="e#9223#9224#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2112,14 +2110,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
@@ -2139,11 +2137,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#9024#9025#0" expanded="true" />
+            <element signature="e#9065#9066#0" expanded="true" />
+            <element signature="e#9098#9099#0" expanded="true" />
+            <element signature="e#9136#9137#0" expanded="true" />
+            <element signature="e#9175#9176#0" expanded="true" />
+            <element signature="e#9223#9224#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2204,14 +2209,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.705882">
           <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ne.png">
@@ -2227,9 +2232,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_left_menu_simple.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.0">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
@@ -2237,6 +2239,9 @@
             <element signature="e#641#674#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/left_menu_selector_game1.xml">
@@ -2275,31 +2280,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.5">
           <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ChooseLevelActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="49" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29290617">
           <caret line="70" column="32" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="32" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ScoreActivity.java">
@@ -2309,36 +2307,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0627451">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding>
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#629#630#0" expanded="false" />
+            <element signature="e#678#679#0" expanded="false" />
+            <element signature="e#715#716#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#922#923#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#1000#1001#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1071#1072#0" expanded="false" />
+            <element signature="e#1103#1104#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1198#1199#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
+            <element signature="e#2481#2482#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2373,41 +2364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2497" column="16" selection-start-line="2497" selection-start-column="16" selection-end-line="2497" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#646#647#0" expanded="false" />
-            <element signature="e#680#681#0" expanded="false" />
-            <element signature="e#711#712#0" expanded="false" />
-            <element signature="e#964#965#0" expanded="false" />
-            <element signature="e#1021#1022#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1127#1128#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2446,41 +2402,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Solver.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05027933">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/ChooseLevelActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="213" column="11" selection-start-line="213" selection-start-column="11" selection-end-line="213" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="62" selection-start-line="128" selection-start-column="62" selection-end-line="128" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/MyCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/enums/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7197581">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beebzb/bakalarka/entity/GameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5148064">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="e#9024#9025#0" expanded="true" />
+            <element signature="e#9065#9066#0" expanded="true" />
+            <element signature="e#9098#9099#0" expanded="true" />
+            <element signature="e#9136#9137#0" expanded="true" />
+            <element signature="e#9175#9176#0" expanded="true" />
+            <element signature="e#9223#9224#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

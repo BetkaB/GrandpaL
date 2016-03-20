@@ -306,7 +306,7 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Zvieratá deda Lesoňa</string>
-    <string name="game">Hra</string>
+    <string name="gameHandler">Hra</string>
     <string name="game_1">Kto vyhrá?</string>
     <string name="game_2">Kto chýba?</string>
     <string name="game_3">Váhy</string>

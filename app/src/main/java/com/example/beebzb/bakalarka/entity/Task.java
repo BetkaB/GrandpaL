@@ -58,8 +58,8 @@ public class Task {
     }
 
     private void createCircles(Canvas canvas) {
-        int y = Game.canvas.getCanvasHeight() / 2;
-        int x = Game.canvas.X_BOTTOM_ROW_CENTER;
+        int y = GameHandler.canvas.getCanvasHeight() / 2;
+        int x = GameHandler.canvas.X_BOTTOM_ROW_CENTER;
         circles = new ArrayList<Circle>();
         int padding = 10;
         int totalCircles = leftSide.size() + rightSide.size() + 1;
@@ -67,14 +67,14 @@ public class Task {
         int total_width = totalCircles * (2*radius + padding);
         int startX = x - (total_width / 2) + (radius / 2);
         for (Animal animal : leftSide) {
-            circles.add(new Circle(startX, y, radius, true, Game.context, animal, null ));
+            circles.add(new Circle(startX, y, radius, true, GameHandler.context, animal, null ));
             startX += (2 * radius) + padding;
         }
-        staticCicles.add(new Circle(startX, y, 70, true, Game.context, null, getOperation()));
+        staticCicles.add(new Circle(startX, y, 70, true, GameHandler.context, null, getOperation()));
 
         startX += (2 * radius) + padding;
         for (Animal animal : rightSide) {
-            circles.add(new Circle(startX, y, radius, true, Game.context, animal, null));
+            circles.add(new Circle(startX, y, radius, true, GameHandler.context, animal, null));
             startX += (2 * radius) + padding;
         }
     }

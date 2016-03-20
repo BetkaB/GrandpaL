@@ -1350,7 +1350,7 @@
         <item>Uhádni aké zviera sa skrýva za maskou.</item>
         <item>Uhádni aké zvieratá sa skrývajú za maskami. Hľadáš teda 2 zvieratá.</item>
         <item>Uhádni aké zvieratá sa skrývajú za maskami. Hľadáš teda 2 zvieratá. V tejto úrovni sa stretneš aj so zvieratami krava a kôň.</item>
-    </string-array><string name="game_1">Kto vyhrá?</string><string name="game_2">Kto chýba?</string><string name="title_activity_editor_first_game">EditorFirstGameActivity</string><string name="game_custom">Vlastný level pre hru %s</string><string name="game_activity_help">Legenda</string><string name="title_activity_choose_level"><u>Výber levelu</u></string><string name="score">Body</string><string name="title_activity_game">GameActivity</string><string-array name="game_1_text">
+    </string-array><string name="game_1">Kto vyhrá?</string><string name="game_2">Kto chýba?</string><string name="title_activity_editor_first_game">EditorFirstGameActivity</string><string name="game_custom">Vlastný level pre hru %s</string><string name="gameHandler">Hra</string><string name="game_activity_help">Legenda</string><string name="title_activity_choose_level"><u>Výber levelu</u></string><string name="score">Body</string><string name="title_activity_game">GameActivity</string><string-array name="game_1_text">
         <item>Vyber znamienko a vyjadri tak či sú obe strany rovnako silné.</item>
         <item>Ktorá strana je silnejšia? Ak sú strany rovnako silné, vyber znamienko rovná sa ( = ).</item>
         <item>Ktorá strana je silnejšia? V tejto úrovni sa stretneš aj so zvieratami krava a kôň. </item>
@@ -1368,7 +1368,7 @@
         <item>Vyber zviera tak, aby platila nerovnosť.</item>
         <item>Vyber zviera tak, aby platila rovnosť.</item>
         <item>Vyber zviera tak, aby platila rovnosť. V tejto úrovni sa stretneš aj so zvieratami krava a kôň.</item>
-    </string-array><string name="hello_blank_fragment">Hello blank fragment</string><string name="game_activity_solutions">Riešenie</string><string name="title_activity_create_level"><u>Vytvor si nový level</u></string><string name="game">Hra</string><string name="title_activity_score"><u>Skóre</u></string></file><file path="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\res\values\styles.xml" qualifiers=""><style name="CreateLevelRow">
+    </string-array><string name="hello_blank_fragment">Hello blank fragment</string><string name="game_activity_solutions">Riešenie</string><string name="title_activity_create_level"><u>Vytvor si nový level</u></string><string name="title_activity_score"><u>Skóre</u></string></file><file path="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\src\main\res\values\styles.xml" qualifiers=""><style name="CreateLevelRow">
         <item name="android:padding">6dp</item>
         <item name="android:layout_marginLeft">@dimen/score_row_margin_left_and_right</item>
         <item name="android:layout_marginRight">@dimen/score_row_margin_left_and_right</item>

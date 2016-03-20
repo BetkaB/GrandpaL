@@ -1901,7 +1901,7 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int action_settings=0x7f060014;
         public static final int app_name=0x7f060015;
-        public static final int game=0x7f060016;
+        public static final int gameHandler=0x7f060016;
         public static final int game_1=0x7f060017;
         public static final int game_2=0x7f060018;
         public static final int game_3=0x7f060019;

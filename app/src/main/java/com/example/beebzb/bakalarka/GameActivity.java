@@ -1,7 +1,6 @@
 package com.example.beebzb.bakalarka;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -15,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.beebzb.bakalarka.entity.Game;
+import com.example.beebzb.bakalarka.entity.GameHandler;
 
 
 public class GameActivity extends MyActivity {
@@ -47,12 +47,14 @@ public class GameActivity extends MyActivity {
     private String solutions;
     private String help;
 
-    // Game
+    // GameHandler
     Thread thread;
+    public static boolean gameOn = false;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        gameOn = true;
         Log.e("LEFT_MENU", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
@@ -97,7 +99,7 @@ public class GameActivity extends MyActivity {
         }
 
         final MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
-        myCanvas.setGame(new Game(colorInt, getBaseContext(), chosenGame, chosenLevel, myCanvas, this));
+        myCanvas.setGameHandler(new GameHandler(getBaseContext(),new Game(colorInt,chosenGame, chosenLevel), myCanvas, this));
         myCanvas.postInvalidate();
 
 
@@ -124,17 +126,17 @@ public class GameActivity extends MyActivity {
         thread = new Thread() {
             @Override
             public void run() {
-                long lastLoopTime = System.nanoTime();
+                long lastLoopTime = System.currentTimeMillis();
                 final int TARGET_FPS = 60;
                 final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
                 long lastFpsTime = 0;
 
 
                 try {
-                    while (true) {
-                        Log.e("THREAD","run");
+                    while (gameOn) {
+                       // Log.e("THREAD","run");
                         long sleepTime = 0;
-                        long now = System.nanoTime();
+                        long now = System.currentTimeMillis();
                         long updateLength = now - lastLoopTime;
                         lastLoopTime = now;
                         double delta = updateLength / ((double) OPTIMAL_TIME);
@@ -148,13 +150,13 @@ public class GameActivity extends MyActivity {
                         myCanvas.updateDelta(delta);
                         myCanvas.postInvalidate();
 
-                        sleepTime = (lastLoopTime - System.nanoTime() + OPTIMAL_TIME) / 1000000;
+                        sleepTime = (lastLoopTime - System.currentTimeMillis() + OPTIMAL_TIME) / 1000000;
                         sleep(sleepTime);
 
 
                         //handler.post(this);
                     }
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     Log.e("THREAD","interupted");
                     e.printStackTrace();
                 }
@@ -217,7 +219,8 @@ public class GameActivity extends MyActivity {
     public void onBackPressed() {
         super.onBackPressed();
         if (thread != null){
-            thread.interrupt();
+           // thread.interrupt();
+            this.gameOn = false;
         }
     }
 

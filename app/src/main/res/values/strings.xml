@@ -5,7 +5,7 @@
     <string name="game_3">Váhy</string>
     <string name="game_4">Dve stratené zvieratá</string>
     <string name="game_custom">Vlastný level pre hru %s</string>
-    <string name="game">Hra</string>
+    <string name="gameHandler">Hra</string>
     <string-array name="game_1_text">
         <item>Vyber znamienko a vyjadri tak či sú obe strany rovnako silné.</item>
         <item>Ktorá strana je silnejšia? Ak sú strany rovnako silné, vyber znamienko rovná sa ( = ).</item>

@@ -133,6 +133,7 @@ public class ChooseLevelActivity extends MyActivity {
     public void setListeners(){
         for (MenuImageButton btn : buttons){
                 btn.setOnClickListener(new View.OnClickListener() {
+                    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
                     @Override
                     public void onClick(View v) {
                         MenuImageButton clickedButton = (MenuImageButton) v;
@@ -206,6 +207,8 @@ public class ChooseLevelActivity extends MyActivity {
                 i.putExtra("CHOSEN_LEVEL", chosen_level);
                 i.putExtra("CHOSEN_GAME", chosen_game);
                 startActivity(i);
+
+
 
             }
         });

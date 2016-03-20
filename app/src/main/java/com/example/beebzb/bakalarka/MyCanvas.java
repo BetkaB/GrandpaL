@@ -9,11 +9,11 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.beebzb.bakalarka.entity.Game;
+import com.example.beebzb.bakalarka.entity.GameHandler;
 import com.example.beebzb.bakalarka.layout.MyRoundedRect;
 
 public class MyCanvas extends View implements View.OnTouchListener {
-    private Game game;
+    private GameHandler gameHandler;
     private boolean isReady = false, hasUpdatedSize = false;
     private Paint pnt;
     private int canvasWidth, canvasHeight;
@@ -42,7 +42,7 @@ public class MyCanvas extends View implements View.OnTouchListener {
         if (!isReady) {
             return;
         }
-        game.draw(canvas);
+        gameHandler.draw(canvas);
 
     }
 
@@ -52,11 +52,11 @@ public class MyCanvas extends View implements View.OnTouchListener {
         paint.setColor(getResources().getColor(R.color.progressBarEmpty));
         canvas.drawRoundRect(rectF, 25, 25, paint);
         // progress bar fill progress
-        int numberOfTasks = game.getNUMBER_OF_TASKS();
-        double progress = game.getProgress();
+        int numberOfTasks = gameHandler.getNUMBER_OF_TASKS();
+        double progress = gameHandler.getGameProgress();
         paint.setStyle(Paint.Style.FILL);
         RectF rectProgress = new RectF(PROGRESS_BAR_SIDE_PADDING, rectF.top, (float) (PROGRESS_BAR_SIDE_PADDING + (rectF.width() * (progress / 100))), rectF.bottom);
-        paint.setColor(getResources().getColor(game.getColor()));
+        paint.setColor(getResources().getColor(gameHandler.getGameColor()));
         if (progress != 100.0) {
             Path path = MyRoundedRect.RoundedRect(rectProgress, 25, 25, true, false, false, true);
             canvas.drawPath(path, paint);
@@ -76,28 +76,28 @@ public class MyCanvas extends View implements View.OnTouchListener {
 
     private void drawBottomRow(Canvas canvas) {
         paint.setStrokeWidth(0);
-        paint.setColor(getResources().getColor(game.getColor()));
+        paint.setColor(getResources().getColor(gameHandler.getGameColor()));
         canvas.drawRect(0, this.getHeight() - BOTTOM_ROW_HEIGHT, this.getWidth(), this.getHeight(), paint);
         Y_BOTTOM_ROW_CENTER = this.getHeight() - (BOTTOM_ROW_HEIGHT/2);
         X_BOTTOM_ROW_CENTER = this.getWidth()/2;
     }
 
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void setGameHandler(GameHandler gameHandler) {
+        this.gameHandler = gameHandler;
         isReady = true;
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        game.evaluateTouch(event);
+        gameHandler.evaluateTouch(event);
 
         return true;
     }
 
     public void updateDelta(double delta) {
-        if (game != null) {
-            game.updateDelta(delta);
+        if (gameHandler != null) {
+            gameHandler.updateDelta(delta);
         }
     }
 
@@ -118,7 +118,7 @@ public class MyCanvas extends View implements View.OnTouchListener {
         hasUpdatedSize = true;
 
          /*
-        -> notify game object about size change
+        -> notify gameHandler object about size change
 
         if (hasUpdatedSize) {
             gameObject.changeSize(canvasWidth, canvasHeight);
