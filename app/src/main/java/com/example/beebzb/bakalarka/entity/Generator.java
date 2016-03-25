@@ -1,5 +1,7 @@
 package com.example.beebzb.bakalarka.entity;
 
+import android.util.Log;
+
 import com.example.beebzb.bakalarka.enums.Animal;
 import com.example.beebzb.bakalarka.enums.Operation;
 
@@ -68,9 +70,18 @@ public class Generator {
 
     public ArrayList<Task> generateTasksForSecondGame(int number_of_tasks) {
         ArrayList<Task> tasks = new ArrayList<Task>();
+        int totalCount = 0;
+        Solver solver =  new Solver();
+        boolean useAllAnimals = chosenLevel == 3;
+        while (totalCount != number_of_tasks){
+            Task task = generateTaskGame2(chosenLevel);
+            int solutions = solver.getNumberOfSolution(task,useAllAnimals);
+            if (solutions >= 1 ){
+                Log.e("GENERATOR", "2 game with " +solutions+" solutions "+ task.toString());
+                tasks.add(task);
+                totalCount++;
+            }
 
-        for (int i = 0; i < number_of_tasks; i++){
-            tasks.add(generateTaskGame2(chosenLevel));
         }
         return  tasks;
 
@@ -115,11 +126,12 @@ public class Generator {
 
 
         if (randEmpty == 1){
-           // task.addToLeftSide(Animal.EMPTY);
+            task.addToLeftSide(Animal.EMPTY);
+            task.setEmptyAnimalOnLeftSide(true);
             leftSideNumber--;
         }
         else {
-          //  task.addToRightSide(Animal.EMPTY);
+            task.addToRightSide(Animal.EMPTY);
             rightSideNumber--;
         }
         for (int i = 0; i < leftSideNumber; i++) {
@@ -128,10 +140,21 @@ public class Generator {
         for (int i = 0; i < rightSideNumber; i++) {
             task.addToRightSide(Animal.getRandomAnimalBasedOnLevel(chosenLevel));
         }
+
+
+
         return  task;
-
-
     }
 
 
+    public ArrayList<Task> generateTasks(int number_of_tasks) {
+        switch (chosenGame){
+            case 1:
+                return generateTasksForFirstGame(number_of_tasks);
+            default:
+                Log.e("GENERATOR", "generating for second game");
+                return generateTasksForSecondGame(number_of_tasks);
+        }
+
+    }
 }

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.beebzb.bakalarka.entity.Game;
 import com.example.beebzb.bakalarka.entity.GameHandler;
+import com.example.beebzb.bakalarka.entity.Solver;
 
 
 public class GameActivity extends MyActivity {
@@ -50,6 +51,7 @@ public class GameActivity extends MyActivity {
     // GameHandler
     Thread thread;
     public static boolean gameOn = false;
+    private Game game;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -99,7 +101,8 @@ public class GameActivity extends MyActivity {
         }
 
         final MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
-        myCanvas.setGameHandler(new GameHandler(getBaseContext(),new Game(colorInt,chosenGame, chosenLevel), myCanvas, this));
+        game = new Game(colorInt, chosenGame, chosenLevel);
+        myCanvas.setGameHandler(new GameHandler(getBaseContext(), game, myCanvas, this));
         myCanvas.postInvalidate();
 
 
@@ -134,7 +137,7 @@ public class GameActivity extends MyActivity {
 
                 try {
                     while (gameOn) {
-                       // Log.e("THREAD","run");
+                        // Log.e("THREAD","run");
                         long sleepTime = 0;
                         long now = System.currentTimeMillis();
                         long updateLength = now - lastLoopTime;
@@ -157,7 +160,7 @@ public class GameActivity extends MyActivity {
                         //handler.post(this);
                     }
                 } catch (Exception e) {
-                    Log.e("THREAD","interupted");
+                    Log.e("THREAD", "interrupted");
                     e.printStackTrace();
                 }
             }
@@ -218,8 +221,8 @@ public class GameActivity extends MyActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (thread != null){
-           // thread.interrupt();
+        if (thread != null) {
+            // thread.interrupt();
             this.gameOn = false;
         }
     }
@@ -238,7 +241,14 @@ public class GameActivity extends MyActivity {
         this.text.setVisibility(View.VISIBLE);
         this.helpImView.setVisibility(View.GONE);
         this.title.setText(solutions);
-        this.text.setText(" ");
+        if (chosenGame == 1) {
+            this.text.setText(getResources().getQuantityString(R.plurals.number_of_solutions, 1, 1));
+        } else {
+            int solutions = new Solver().getNumberOfSolution(game.getCurrentTask(), chosenLevel == 3);
+            String temp = getResources().getQuantityString(R.plurals.number_of_solutions, solutions, solutions);
+            this.text.setText(temp);
+        }
+
     }
 
     public void showHelp() {

@@ -19,6 +19,7 @@ public class Circle {
     public float y;
     public float radius;
     public boolean isStatic = false;
+    private boolean isOccupied = false;
     private Animal animal;
     private Operation operation;
 
@@ -88,7 +89,7 @@ public class Circle {
     }
 
     public void setOperation(Operation operation){
-        if (isStatic){
+        if (isStatic ){
             this.operation = operation;
         }
     }

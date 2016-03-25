@@ -16,7 +16,7 @@ public class MyCanvas extends View implements View.OnTouchListener {
     private GameHandler gameHandler;
     private boolean isReady = false, hasUpdatedSize = false;
     private Paint pnt;
-    private int canvasWidth, canvasHeight;
+    public int canvasWidth, canvasHeight;
     public static final int BOTTOM_ROW_HEIGHT = 200;
     public static int Y_BOTTOM_ROW_CENTER = 0;
     public static int X_BOTTOM_ROW_CENTER = 0;
@@ -132,8 +132,9 @@ public class MyCanvas extends View implements View.OnTouchListener {
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        //canvasWidth = w;
-        //canvasHeight = h;
+        canvasWidth = w;
+        canvasHeight = h;
+        gameHandler.resizeWidget(w, h);
         //hasUpdatedSize = true;
         super.onSizeChanged(w, h, oldw, oldh);
     }

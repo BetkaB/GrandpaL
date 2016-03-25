@@ -12,6 +12,8 @@
     <color name="infoRowTitle">#444444</color>
     <color name="progressBarStroke">#444444</color>
     <color name="progressBarEmpty">#ffffffff</color>
+    <color name="game_activity_pop_up_bg">#444444</color>
+
 
 
 </resources>

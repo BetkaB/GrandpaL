@@ -1,10 +1,12 @@
 package com.example.beebzb.bakalarka.entity;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -28,6 +30,10 @@ public class GameHandler {
     private GameActivity activity;
     private ArrayList<Circle> bottomRowCircles;
 
+    private boolean paused;
+    private PopUp popUpWidget;
+    public static Handler mHandler;
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public GameHandler(Context context, Game game, MyCanvas myCanvas, GameActivity activity) {
         this.game = game;
@@ -37,6 +43,26 @@ public class GameHandler {
 
         circles = new ArrayList<>();
         staticCircles = new ArrayList<>();
+
+        // Pop Up settings
+        this.popUpWidget = new PopUp(context, this, myCanvas.canvasWidth, myCanvas.canvasHeight, 2);
+
+        // Handler GUI
+
+        mHandler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case PopUp.CALLBACK:
+                        Log.d("THREAD-POPUP", "Obtained message!");
+                        popUpWidget.start();
+                        break;
+                    default:
+                        super.handleMessage(msg);
+                }
+            }
+        };
+
 
     }
 
@@ -70,15 +96,16 @@ public class GameHandler {
             scr.draw(canvas);
         }
 
-            if (game.getCurrentTask() != null) {
-                game.getCurrentTask().draw(canvas);
-                staticCircles = game.getCurrentTask().getStaticCircles();
-                for (Circle circle : staticCircles) {
-                    circle.draw(canvas);
-                }
+        if (game.getCurrentTask() != null) {
+            game.getCurrentTask().draw(canvas);
+            staticCircles = game.getCurrentTask().getStaticCircles();
+            for (Circle circle : staticCircles) {
+                circle.draw(canvas);
+            }
 
         }
         drawBottomRowCircles(canvas);
+        this.popUpWidget.draw(canvas);
 
     }
 
@@ -114,6 +141,7 @@ public class GameHandler {
                 }
                 break;
             case MotionEvent.ACTION_UP:
+
                 if (this.selected != -1) {
                     circles.get(this.selected).clearDXY();
                 }
@@ -149,18 +177,24 @@ public class GameHandler {
                     // currentTask.setOperation();
                     // temp
 
-                    game.getCurrentTask().setOperation(temp.getOperation());
+                    if (staticCircle.getOperation() ==  Operation.EMPTY){
+                        //Log.e("SOLVER","we are guessing operation");
+                        game.getCurrentTask().setOperation(temp.getOperation());
+                    }
+                    else {
+                        //Log.e("SOLVER","we are guessing animal");
+                        game.getCurrentTask().setEmptyAnimal(temp.getAnimal());
+                    }
+
                     boolean result = game.isCurrentTaskSolved();
-                    if (result) {
+                    // backtrack vymazat a nechat volne miesto
+
+                    if (result && !paused) {
                         game.incrementCompletedTasks();
 
-                        if (game.areAllTasksCompleted()) {
-                            activity.gameOn = false;
-                            activity.finish();
-                        }
-                        else {
-                            game.getNextTask();
-                        }
+                        // Pause game + Pop Up + checkGame()
+                        doPopUp();
+
                     }
 
                     // Handle enter
@@ -176,6 +210,13 @@ public class GameHandler {
             }
             temp.updateDragForce(-sumForceX, -sumForceY, delta);
         }
+    }
+
+    private void doPopUp() {
+        this.paused = true;
+        //(new Thread(this.popUpWidget)).start();
+        Log.e("THREAD-POPUP", "doPopUp()");
+        popUpWidget.handleState(popUpWidget.CALLBACK);
     }
 
     public ArrayList<Circle> getBottomRowCircles() {
@@ -232,7 +273,7 @@ public class GameHandler {
         final int radius = 60;
         int total_width;
         int startX;
-        total_width = 8 * (radius + padding);
+        total_width = 6 * (2*radius + padding);
         startX = x - (total_width / 2) + (radius / 2);
         circles.add(new Circle(startX, y, radius, false, context, Animal.MOUSE, null));
         startX += (2 * radius) + padding;
@@ -273,4 +314,37 @@ public class GameHandler {
     public int getNUMBER_OF_TASKS() {
         return game.getNUMBER_OF_TASKS();
     }
+
+    public void notifyForCallback() {
+
+        Log.e("THREAD-POPUP", "notified!()");
+        // Callback for handler!
+        checkGame();
+
+    }
+
+    public void checkGame() {
+        Log.e("THREAD-POPUP", "checkGame!()");
+
+        // update number of solutions if clicked
+        // init bottom circles - works when motion UP
+        circles = getBottomRowCircles();
+
+        if (game.areAllTasksCompleted()) {
+            updateScore();
+            activity.gameOn = false;
+            activity.finish();
+        } else {
+            game.getNextTask();
+        }
+
+        // Unblock
+        this.paused = false;
+    }
+
+    public void resizeWidget(int w, int h) {
+        popUpWidget.resize(w, h);
+    }
+
+
 }

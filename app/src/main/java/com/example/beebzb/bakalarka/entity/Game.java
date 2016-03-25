@@ -1,5 +1,7 @@
 package com.example.beebzb.bakalarka.entity;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Game {
@@ -9,7 +11,7 @@ public class Game {
     private Solver solver = new Solver();
     private Generator generator;
     private ArrayList<Task> tasks = new ArrayList<Task>();
-    private final int NUMBER_OF_TASKS = 3;
+    private final int NUMBER_OF_TASKS = 5;
     private int completed_tasks = 0;
     private int color;
 
@@ -18,7 +20,7 @@ public class Game {
         generator = new Generator(chosenGame, chosenLevel);
         this.chosenGame = chosenGame;
         this.chosenLevel = chosenLevel;
-        tasks = generator.generateTasksForFirstGame(NUMBER_OF_TASKS);
+        tasks = generator.generateTasks(NUMBER_OF_TASKS);
         getNextTask();
     }
 
@@ -51,12 +53,8 @@ public class Game {
     }
 
     public boolean isCurrentTaskSolved() {
+        Log.d("BUG_SECOND_GAME", currentTask.toString());
         return solver.isSolved(currentTask);
-    }
-
-    public void setCurrentTaskCompleted(boolean currentTaskCompleted) {
-        currentTask.setCompleted(currentTaskCompleted);
-        completed_tasks++;
     }
 
     public boolean areAllTasksCompleted(){
@@ -70,4 +68,5 @@ public class Game {
     public int getColor() {
         return color;
     }
+
 }

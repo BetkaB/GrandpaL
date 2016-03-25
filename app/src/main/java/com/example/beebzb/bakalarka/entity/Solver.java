@@ -1,6 +1,5 @@
 package com.example.beebzb.bakalarka.entity;
 
-
 import android.util.Log;
 
 import com.example.beebzb.bakalarka.enums.Animal;
@@ -27,9 +26,10 @@ public class Solver {
 
     private boolean compare(int leftSum, int rightSum, Operation operation) {
         boolean result = false;
+        Log.e("SOLVER",leftSum+" "+operation+" "+rightSum);
         switch (operation) {
             case EQUAL:
-                 result = leftSum == rightSum;
+                result = leftSum == rightSum;
                 break;
             case GREATER_THAN:
                 result = leftSum > rightSum;
@@ -41,6 +41,69 @@ public class Solver {
                 result = leftSum != rightSum;
                 break;
         }
+        Log.e("SOLVER",leftSum+" "+operation+" "+rightSum+" = "+result);
         return result;
     }
+
+    public int getNumberOfSolution(Task task, boolean useAllAnimals) {
+        int res = 0;
+        int leftSum = 0;
+        int rightSum = 0;
+        boolean emptyOnLeftSide = false;
+        for (Animal animal : task.getLeftSide()) {
+            if (animal == Animal.EMPTY) {
+                emptyOnLeftSide = true;
+            }
+            leftSum += animal.getValue();
+        }
+
+        for (Animal animal : task.getRightSide()) {
+            rightSum += animal.getValue();
+        }
+
+        int temp = 0;
+        // for Inequations - ONE EMPTY PLACE
+
+        // TODO dorobit
+       // Log.e("SOLVER","left= "+leftSum+" right= "+rightSum);
+        if (useAllAnimals) {
+            for (Animal animal : Animal.hard)
+                if (emptyOnLeftSide) {
+                    temp = rightSum - leftSum;
+                    if (compare(animal.getValue(), temp, task.getOperation())) {
+                        res++;
+                      //  Log.e("SOLVER", "LEFT 1, SOLVABLE");
+
+                    }
+                } else {
+                    temp = leftSum - rightSum;
+                    if (compare(temp, animal.getValue(), task.getOperation())) {
+                        res++;
+                      //  Log.e("SOLVER", "RIGHT, SOLVABLE");
+                    }
+                }
+        } else {
+            for (Animal animal : Animal.easy)
+                if (emptyOnLeftSide) {
+                    temp = rightSum - leftSum;
+                    if (compare(animal.getValue(), temp, task.getOperation())) {
+                        res++;
+                     //   Log.e("SOLVER", "LEFT 2, SOLVABLE");
+
+                    }
+                } else {
+                    temp = leftSum - rightSum;
+                    if (compare(temp, animal.getValue(), task.getOperation())) {
+                        res++;
+                     //   Log.e("SOLVER", "RIGHT, SOLVABLE");
+                    }
+                }
+        }
+
+
+        return res;
+
+    }
+
+
 }

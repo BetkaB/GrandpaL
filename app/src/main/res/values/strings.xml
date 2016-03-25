@@ -40,15 +40,26 @@
     <string name="score">Body</string>
 
     <string name="game_activity_solutions">Riešenie</string>
+    <string name="game_activity_task_solutions">Táto úloha má %d </string>
     <string name="game_activity_help">Legenda</string>
     <string name="play">Hraj</string>
 
+    <string name="pop_up_correct_answer_1">Správne!</string>
+    <string name="pop_up_correct_answer_2">Super!</string>
+    <string name="pop_up_correct_answer_3">Dobrá práca! </string>
+    <string name="pop_up_correct_answer_4">Len tak ďalej!</string>
+    <string name="pop_up_correct_answer_5">Si šikovný!</string>
 
 
-    <string name="title_activity_create_level"><u>Vytvor si nový level</u></string>
-    <string name="title_activity_choose_level"><u>Výber levelu</u></string>
+
+
+
+
+
+    <string name="title_activity_create_level">~ Tu si môžeš vytvoriť vlastnú úlohu pre každú hru ~</string>
+    <string name="title_activity_choose_level">~ Výber si hru a úroveň, ktorú chceš hrať ~</string>
     <string name="title_activity_my">MyActivity</string>
-    <string name="title_activity_score"><u>Skóre</u></string>
+    <string name="title_activity_score">~ Skóre ~</string>
     <string name="title_activity_editor_first_game">EditorFirstGameActivity</string>
 
     <string name="hello_world">Hello world!</string>
@@ -57,5 +68,12 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_game_activity2">GameActivity2</string>
+
+
+        <plurals name="number_of_solutions">
+            <item quantity="one">Táto úloha má %d riešenie.</item>
+            <item quantity="few">Táto úloha má %d riešenia.</item>
+            <item quantity="other">Táto úloha má %d riešení.</item>
+        </plurals>
 
 </resources>
