@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import com.example.beebzb.bakalarka.ChooseLevelActivity;
 import com.example.beebzb.bakalarka.GameActivity;
 import com.example.beebzb.bakalarka.MainActivity;
 import com.example.beebzb.bakalarka.MyCanvas;
@@ -18,6 +19,8 @@ import com.example.beebzb.bakalarka.enums.Animal;
 import com.example.beebzb.bakalarka.enums.Operation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class GameHandler {
 
@@ -25,7 +28,7 @@ public class GameHandler {
     private ArrayList<Circle> circles;
     private ArrayList<Circle> staticCircles;
     public static Context context;
-    private Game game;
+    public static Game game;
     public static MyCanvas canvas;
     private GameActivity activity;
     private ArrayList<Circle> bottomRowCircles;
@@ -34,8 +37,11 @@ public class GameHandler {
     private PopUp popUpWidget;
     public static Handler mHandler;
 
+
+    // ------- 3. game
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public GameHandler(Context context, Game game, MyCanvas myCanvas, GameActivity activity) {
+    public GameHandler(Context context, final Game game, MyCanvas myCanvas, GameActivity activity) {
         this.game = game;
         this.activity = activity;
         this.context = context;
@@ -50,6 +56,7 @@ public class GameHandler {
         // Handler GUI
 
         mHandler = new Handler(Looper.getMainLooper()) {
+            Game refGame = game;
             @Override
             public void handleMessage(Message msg) {
                 switch (msg.what) {
@@ -57,20 +64,26 @@ public class GameHandler {
                         Log.d("THREAD-POPUP", "Obtained message!");
                         popUpWidget.start();
                         break;
+                    case MyCanvas.INIT_SIZE_CANVAS:
+                        Log.d("CANVAS", "INIT_SIZE_CANVAS!");
+                        circles = getBottomRowCircles();
+                        refGame.getCurrentTask().resize(canvas.canvasWidth, canvas.canvasHeight);
+                        break;
                     default:
                         super.handleMessage(msg);
                 }
             }
         };
 
+        Log.d("DEBUG_3_GAME", String.valueOf(game.getChosenGame()));
 
     }
 
+
+
+
+
     private void drawBottomRowCircles(Canvas canvas) {
-        if (circles.size() == 0) {
-            Log.e("BOTTOM_ROW", "null");
-            circles = getBottomRowCircles();
-        }
         for (Circle cr : circles) {
             cr.draw(canvas);
         }
@@ -91,43 +104,48 @@ public class GameHandler {
     }
 
     public void draw(Canvas canvas) {
-
-        for (Circle scr : staticCircles) {
-            scr.draw(canvas);
-        }
-
         if (game.getCurrentTask() != null) {
             game.getCurrentTask().draw(canvas);
+            // Referencia
             staticCircles = game.getCurrentTask().getStaticCircles();
+
+
             for (Circle circle : staticCircles) {
                 circle.draw(canvas);
             }
+            drawBottomRowCircles(canvas);
+            this.popUpWidget.draw(canvas);
 
         }
-        drawBottomRowCircles(canvas);
-        this.popUpWidget.draw(canvas);
-
     }
 
     private void updateScore() {
         String key = "";
+        String keyProgress = "";
         switch (game.getChosenGame()) {
             case 1:
                 key = MainActivity.SCORE_GAME1;
+                keyProgress = ChooseLevelActivity.PROGRESS_GAME_1;
                 break;
             case 2:
                 key = MainActivity.SCORE_GAME2;
+                keyProgress = ChooseLevelActivity.PROGRESS_GAME_2;
                 break;
             case 3:
                 key = MainActivity.SCORE_GAME3;
+                keyProgress = ChooseLevelActivity.PROGRESS_GAME_3;
                 break;
             case 4:
                 key = MainActivity.SCORE_GAME4;
+                keyProgress = ChooseLevelActivity.PROGRESS_GAME_4;
                 break;
         }
         int score = PreferenceManager.getDefaultSharedPreferences(context).getInt(key, 0);
         score += 5;
         PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(key, score).commit();
+        // TODO update only if new progress is better than old one
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(keyProgress, game.getChosenLevel()+1).commit();
+
     }
 
     public void evaluateTouch(MotionEvent event) {
@@ -177,13 +195,14 @@ public class GameHandler {
                     // currentTask.setOperation();
                     // temp
 
-                    if (staticCircle.getOperation() ==  Operation.EMPTY){
+                    if (staticCircle.getOperation() == Operation.EMPTY) {
                         //Log.e("SOLVER","we are guessing operation");
                         game.getCurrentTask().setOperation(temp.getOperation());
-                    }
-                    else {
+                    } else {
                         //Log.e("SOLVER","we are guessing animal");
-                        game.getCurrentTask().setEmptyAnimal(temp.getAnimal());
+                        if (game.getChosenGame() == 2) {
+                            game.getCurrentTask().setEmptyAnimal(temp.getAnimal());
+                        }
                     }
 
                     boolean result = game.isCurrentTaskSolved();
@@ -227,8 +246,11 @@ public class GameHandler {
                 break;
             case 2:
             case 4:
-                circles = getSecondThirdGameBottomRow(game.getChosenLevel());
+                circles = getSecondFourthGameBottomRow(game.getChosenLevel());
                 break;
+            case 3:
+                circles = getThirdGameBottomRow();
+
         }
         return circles;
     }
@@ -239,65 +261,68 @@ public class GameHandler {
         int x = canvas.X_BOTTOM_ROW_CENTER;
         int padding = 10;
         ArrayList<Circle> circles = new ArrayList<Circle>();
-        final int radius = 60;
+        final int radius = (int) Circle.radius_normal;
         int total_width;
         int startX;
         switch (chosenLevel) {
             case 1:
                 total_width = 2 * (2 * radius + padding);
                 startX = x - (total_width / 2) + (radius / 2);
-                circles.add(new Circle(startX, y, radius, false, context, null, Operation.EQUAL));
+                circles.add(new Circle(startX, y,  false, context, null, Operation.EQUAL));
                 startX += (2 * radius) + padding;
-                circles.add(new Circle(startX, y, radius, false, context, null, Operation.NOT_EQUAL));
+                circles.add(new Circle(startX, y,  false, context, null, Operation.NOT_EQUAL));
                 break;
             case 2:
             case 3:
                 total_width = 3 * (2 * radius + padding);
                 startX = x - (total_width / 2) + (radius / 2);
-                circles.add(new Circle(startX, y, radius, false, context, null, Operation.EQUAL));
+                circles.add(new Circle(startX, y, false, context, null, Operation.EQUAL));
                 startX += (2 * radius) + padding;
-                circles.add(new Circle(startX, y, radius, false, context, null, Operation.GREATER_THAN));
+                circles.add(new Circle(startX, y,  false, context, null, Operation.GREATER_THAN));
                 startX += (2 * radius) + padding;
-                circles.add(new Circle(startX, y, radius, false, context, null, Operation.LESS_THAN));
+                circles.add(new Circle(startX, y,  false, context, null, Operation.LESS_THAN));
                 break;
 
         }
         return circles;
     }
 
-    public ArrayList<Circle> getSecondThirdGameBottomRow(int chosenLevel) {
+    public ArrayList<Circle> getSecondFourthGameBottomRow(int chosenLevel) {
         int y = canvas.Y_BOTTOM_ROW_CENTER;
         int x = canvas.X_BOTTOM_ROW_CENTER;
         int padding = 10;
         ArrayList<Circle> circles = new ArrayList<Circle>();
-        final int radius = 60;
+        final int radius = (int) Circle.radius_normal;
         int total_width;
         int startX;
-        total_width = 6 * (2*radius + padding);
+        int numberOfAnimals = (chosenLevel == 3) ? Animal.hard.length : Animal.easy.length;
+
+        total_width = numberOfAnimals * (2 * radius + padding);
         startX = x - (total_width / 2) + (radius / 2);
-        circles.add(new Circle(startX, y, radius, false, context, Animal.MOUSE, null));
+
+        circles.add(new Circle(startX, y, false, context, Animal.MOUSE, null));
         startX += (2 * radius) + padding;
 
-        circles.add(new Circle(startX, y, radius, false, context, Animal.CAT, null));
+        circles.add(new Circle(startX, y,  false, context, Animal.CAT, null));
         startX += (2 * radius) + padding;
 
-        circles.add(new Circle(startX, y, radius, false, context, Animal.GOOSE, null));
+        circles.add(new Circle(startX, y,  false, context, Animal.GOOSE, null));
         startX += (2 * radius) + padding;
 
-        circles.add(new Circle(startX, y, radius, false, context, Animal.DOG, null));
+        circles.add(new Circle(startX, y, false, context, Animal.DOG, null));
         startX += (2 * radius) + padding;
 
-        circles.add(new Circle(startX, y, radius, false, context, Animal.GOAT, null));
+        circles.add(new Circle(startX, y,  false, context, Animal.GOAT, null));
         startX += (2 * radius) + padding;
 
-        circles.add(new Circle(startX, y, radius, false, context, Animal.RAM, null));
+        circles.add(new Circle(startX, y, false, context, Animal.RAM, null));
         startX += (2 * radius) + padding;
 
         switch (chosenLevel) {
             case 3:
-                circles.add(new Circle(startX, y, radius, false, context, Animal.COW, null));
+                circles.add(new Circle(startX, y, false, context, Animal.COW, null));
                 startX += (2 * radius) + padding;
-                circles.add(new Circle(startX, y, radius, false, context, Animal.HORSE, null));
+                circles.add(new Circle(startX, y,  false, context, Animal.HORSE, null));
                 break;
         }
         return circles;
@@ -347,4 +372,29 @@ public class GameHandler {
     }
 
 
+    public ArrayList<Circle> getThirdGameBottomRow() {
+        int y = canvas.Y_BOTTOM_ROW_CENTER;
+        int x = canvas.X_BOTTOM_ROW_CENTER;
+        int padding = 10;
+        ArrayList<Circle> circles = new ArrayList<Circle>();
+        final int radius = (int) Circle.radius_normal;
+        int total_width;
+        int startX;
+        HashMap<Animal, Integer> animalMap = game.getCurrentTask().getAnimalMap();
+
+        total_width = animalMap.size() * (2 * radius + padding);
+        startX = x - (total_width / 2) + (radius / 2);
+
+        Iterator it = animalMap.entrySet().iterator();
+        while (it.hasNext()) {
+            HashMap.Entry pair = (HashMap.Entry)it.next();
+            int numberOfConcreteAnimal = (int) pair.getValue();
+            Animal animal = (Animal) pair.getKey();
+            for (int i  = 0; i < numberOfConcreteAnimal; i++){
+                circles.add(new Circle(startX, y, false, context, animal, null));
+            }
+            startX += (2 * radius) + padding;
+        }
+        return circles;
+    }
 }

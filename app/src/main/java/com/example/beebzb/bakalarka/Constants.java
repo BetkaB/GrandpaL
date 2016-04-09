@@ -11,6 +11,12 @@ public class Constants {
     public static final String[] gameColors = new String[] {"#FFC3AE","#CBE8BA","#C9F1FD","#FEF8A0"};
     public static final int[] selectors = new int[] {R.drawable.left_menu_selector_game1, R.drawable.left_menu_selector_game2, R.drawable.left_menu_selector_game3, R.drawable.left_menu_selector_game4};
 
+    public static final int[] editorText = new int[] {R.string.editor_text_game_1, R.string.editor_text_game_2, R.string.editor_text_game_3, R.string.editor_text_game_4};
+    public static final int[] editorTitle = new int[] {R.string.editor_title_game_1, R.string.editor_title_game_2, R.string.editor_title_game_3, R.string.editor_title_game_4};
+
+
+
+
 
 
 

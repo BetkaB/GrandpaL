@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\classes-a5cf114d2dc7b5dc7998841d2489ea7ffb97d29e.jar" />
+    </item>
+    <item
         jar="C:\Users\Betka\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -16,18 +23,18 @@
         <dex dex="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\classes-457c8197d22bcd41f9b41a9170d53e8b35a1f600.jar" />
     </item>
     <item
-        jar="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\classes-a5cf114d2dc7b5dc7998841d2489ea7ffb97d29e.jar" />
-    </item>
-    <item
         jar="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
         <dex dex="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-9a42a2460dab8564fba023f471eba7ea3cf54a98.jar" />
+    </item>
+    <item
+        jar="C:\Users\Betka\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="C:\Users\Betka\AndroidStudioProjects\Bakalarka 3\app\build\intermediates\pre-dexed\debug\gson-2.5-602ed19da9f5027ffa81430701c30e64c27f976e.jar" />
     </item>
 
 </items>

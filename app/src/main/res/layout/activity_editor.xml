@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.beebzb.bakalarka.EditorActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="@dimen/left_menu_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/left_menu_bg"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:columnCount="1"
+            android:orientation="vertical"
+            android:rowCount="3">
+
+            <ImageButton
+                android:id="@+id/infoBtn"
+                style="@style/GameButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:focusable="true"
+                android:onClick="onButtonClicked" />
+
+            <ImageButton
+                android:id="@+id/helpBtn"
+                style="@style/HelpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:focusable="false"
+                android:onClick="onButtonClicked"
+                android:src="@drawable/mouseicon" />
+
+            <ImageButton
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_row="2"
+                android:background="@null"
+                android:focusable="false"
+                android:onClick="save"
+                android:src="@drawable/save" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/leaveBtn"
+                style="@style/LeaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClicked" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/infoRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/first_game"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/infoRowTitle"
+                    style="@style/InfoRowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/infoRowText"
+                    style="@style/InfoRowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Medium Text" />
+
+                <ImageView
+                    android:id="@+id/helpImView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/legenda" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/gameIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/game1" />
+
+        </LinearLayout>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.beebzb.bakalarka.EditorGame1Fragment"
+            android:id="@+id/editorGame1"
+            android:layout_gravity="center_horizontal" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.beebzb.bakalarka.EditorGame2Fragment"
+            android:id="@+id/editorGame2"
+            android:layout_gravity="center_horizontal" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.beebzb.bakalarka.EditorGame3Fragment"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/editorGame3" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

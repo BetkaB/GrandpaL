@@ -18,9 +18,7 @@ public class LeftMenuSimpleFragment extends Fragment {
 
     }
 
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_left_menu_simple, container, false);
         ImageButton leaveBtn = (ImageButton) view.findViewById(R.id.leaveBtn);
         leaveBtn.setOnClickListener(new View.OnClickListener() {

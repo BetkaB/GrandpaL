@@ -1,14 +1,17 @@
 package com.example.beebzb.bakalarka.entity;
 
+import android.graphics.Paint;
 import android.util.Log;
+
+import com.example.beebzb.bakalarka.R;
 
 import java.util.ArrayList;
 
 public class Game {
     private int chosenGame;
-    private int chosenLevel;
+    public static int chosenLevel;
     private Task currentTask;
-    private Solver solver = new Solver();
+    private Solver solver;
     private Generator generator;
     private ArrayList<Task> tasks = new ArrayList<Task>();
     private final int NUMBER_OF_TASKS = 5;
@@ -20,9 +23,12 @@ public class Game {
         generator = new Generator(chosenGame, chosenLevel);
         this.chosenGame = chosenGame;
         this.chosenLevel = chosenLevel;
+        solver = new Solver(chosenGame);
         tasks = generator.generateTasks(NUMBER_OF_TASKS);
         getNextTask();
     }
+
+
 
     public Task getCurrentTask() {
         return currentTask;

@@ -95,6 +95,61 @@
     </style>
 
 
+    <style name="EditorText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/screen_title_top_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/screen_title_bottom_margin</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="EditorAnimalIcon">
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="EditorAnimalIconRightInRow" parent="EditorAnimalIcon">
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+
+
+    <style name="CustomDialogButton">
+        <item name="android:textAllCaps">true</item>
+       <item name="android:layout_marginLeft">@dimen/dialog_buttons_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/dialog_buttons_side_margin</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+        <item name="android:paddingLeft">@dimen/dialog_buttons_side_padding</item>
+        <item name="android:paddingRight">@dimen/dialog_buttons_side_padding</item>
+
+    </style>
+
+    <style name="CustomDialogTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">@dimen/dialog_title_font_size</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+    </style>
+
+    <style name="CustomDialogInfo">
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">@dimen/dialog_info_font_size</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">@color/dialog_info_text_color</item>
+
+    </style>
+
+    <style name="EditorVerticalLine">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="EditorRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
 
 
 </resources>

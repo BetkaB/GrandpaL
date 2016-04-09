@@ -6,6 +6,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="arrows_side_padding">10dp</dimen>
+    <dimen name="dialog_buttons_side_margin">30dp</dimen>
+    <dimen name="dialog_buttons_side_padding">20dp</dimen>
+    <dimen name="dialog_elements_margin_bottom">15dp</dimen>
+    <dimen name="dialog_info_font_size">24sp</dimen>
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_title_font_size">30sp</dimen>
+    <dimen name="editor_fragment_inner_padding">15dp</dimen>
+    <dimen name="editor_fragment_radius_empty_animal">90dp</dimen>
+    <dimen name="editor_fragment_radius_icons">70dp</dimen>
     <dimen name="info_row_height">160dp</dimen>
     <dimen name="info_row_title_bottom_margin">10dp</dimen>
     <dimen name="info_row_title_top_margin">15dp</dimen>

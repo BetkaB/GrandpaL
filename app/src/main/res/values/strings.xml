@@ -2,8 +2,8 @@
     <string name="app_name">Zvieratá deda Lesoňa</string>
     <string name="game_1">Kto vyhrá?</string>
     <string name="game_2">Kto chýba?</string>
-    <string name="game_3">Váhy</string>
-    <string name="game_4">Dve stratené zvieratá</string>
+    <string name="game_3">Ohrady</string>
+    <string name="game_4">Dve masky</string>
     <string name="game_custom">Vlastný level pre hru %s</string>
     <string name="gameHandler">Hra</string>
     <string-array name="game_1_text">
@@ -32,10 +32,20 @@
     <string-array name="game_custom_text">
         <item>Teraz hráš vlastný level pre hru <b>Kto vyhrá? </b>. Vyber znamienko a vyjadri, ktorá strana je silnejšia.</item>
         <item>Teraz hráš vlastný level pre hru <b>Kto chýba? </b>. Vyber zviera tak, aby platila rovnosť.</item>
-        <item>Teraz hráš vlastný level pre hru <b>Váhy</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
+        <item>Teraz hráš vlastný level pre hru <b>Ohrady</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
         <item>Teraz hráš vlastný level pre hru <b>Dve stratené zvieratá</b>. Uhádni aké zvieratá sa skrývajú za maskami.</item>
-
     </string-array>
+
+    <string name="editor_text_game_1">Zvoľ zvieratá pre obe strany. Nezabudni, že na každej musí byť minimálne jedno zviera a spolu ich môže byť najviac 10.</string>
+    <string name="editor_text_game_2">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s prázdnym políčkom môže byť najviac 10. Môžeš zvoliť, na ktorej strane sa bude nachádzať prázdne políčko.</string>
+    <string name="editor_text_game_3">Vyber počet zvierat ktoré chceš v hre použiť. Počet zvierat musí byť od 3 do 18 a zvieratá sa musia dať rozdeliť do 3 ohrád.</string>
+    <string name="editor_text_game_4">... text pre editor pre 4 hru.</string>
+
+    <string name="editor_title_game_1">Vytváraš vlastnú úlohu pre hru <b>Kto vyhrá?</b></string>
+    <string name="editor_title_game_2">Vytváraš vlastnú úlohu pre hru <b>Kto chýba?</b></string>
+    <string name="editor_title_game_3">Vytváraš vlastnú úlohu pre hru <b>Ohrady </b></string>
+    <string name="editor_title_game_4">Vytváraš vlastnú úlohu pre hru <b>Dve masky</b></string>
+
 
     <string name="score">Body</string>
 
@@ -50,14 +60,8 @@
     <string name="pop_up_correct_answer_4">Len tak ďalej!</string>
     <string name="pop_up_correct_answer_5">Si šikovný!</string>
 
-
-
-
-
-
-
     <string name="title_activity_create_level">~ Tu si môžeš vytvoriť vlastnú úlohu pre každú hru ~</string>
-    <string name="title_activity_choose_level">~ Výber si hru a úroveň, ktorú chceš hrať ~</string>
+    <string name="title_activity_choose_level">~ Vyber si hru a úroveň, ktorú chceš hrať ~</string>
     <string name="title_activity_my">MyActivity</string>
     <string name="title_activity_score">~ Skóre ~</string>
     <string name="title_activity_editor_first_game">EditorFirstGameActivity</string>
@@ -69,11 +73,37 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_game_activity2">GameActivity2</string>
 
+    <plurals name="number_of_solutions">
+        <item quantity="one">Táto úloha má %d riešenie.</item>
+        <item quantity="few">Táto úloha má %d riešenia.</item>
+        <item quantity="other">Táto úloha má %d riešení.</item>
+    </plurals>
 
-        <plurals name="number_of_solutions">
-            <item quantity="one">Táto úloha má %d riešenie.</item>
-            <item quantity="few">Táto úloha má %d riešenia.</item>
-            <item quantity="other">Táto úloha má %d riešení.</item>
-        </plurals>
+    <string name="editor_left">ľavá strana</string>
+    <string name="editor_right">pravá strana</string>
+    <string name="editor_empty">Prázdne koliesko bude:</string>
+    <string name="editor_empty_on_left">naľavo</string>
+    <string name="editor_empty_on_right">napravo</string>
+    <string name="editor_button_23">Zisti, či má tvoja úloha riešenie</string>
+
+    <string name="pre_editor_dialog_cannot_create_task_info">Najskôr musíš prejsť všetky 3 úrovne vybratej hry.</string>
+    <string name="pre_editor_dialog_cannot_create_task_title">Nemôžeš vytvoriť vlastnú úlohu</string>
+
+
+
+    <string name="dialog_task_cannot_be_saved_title">Úlohu nemožno uložiť!</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_2">Aspoň na jednej strane musí byť minimálne jedno zviera</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_1">Na každej strane musí byť minimálne jedno zviera</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_3">Musíš vybrať minimálne 3 zvieratá</string>
+
+    <string name="dialog_task_cannot_be_saved_info_too_many_animals_12">Presiahol si dovolený počet vybratých zvierat 10</string>
+    <string name="dialog_task_cannot_be_saved_info_too_many_animals_3">Presiahol si dovolený počet vybratých zvierat 18</string>
+    <string name="dialog_task_has_no_solution_title">Takáto úloha nemá riešenie!</string>
+    <string name="dialog_task_has_solution_title">Tvoja úloha má riešenie!</string>
+    <string name="dialog_task_has_solution_info">Môžeš ju uložiť a po výbere v menu si ju môžeš zahrať</string>
+    <string name="dialog_task_has_no_solution_info">Túto úlohu nemožno uložiť</string>
+    <string name="dialog_task_can_be_saved_title">Úloha je uložená!</string>
+    <string name="dialog_task_can_be_saved_info">Môžeš si ju zahrať po výbere vlastnej hry v menu. </string>
+
 
 </resources>

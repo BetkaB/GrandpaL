@@ -4,6 +4,16 @@
     <color name="first_game">#FFC3AE</color>
     <color name="second_game">#CBE8BA</color>
     <color name="third_game">#C9F1FD</color>
+
+    <color name="dialog_stroke">#80444444</color>
+    <color name="dialog_bg">#444444</color>
+    <color name="dialog_title_text_color_negative">#ffa10800</color>
+    <color name="dialog_title_text_color_positive">#ff37a13e</color>
+
+    <color name="dialog_info_text_color">#000000</color>
+
+
+
     <color name="fourth_game">#FEF8A0</color>
     <color name="primaryText">#444444</color>
     <color name="leftMenu">#444444</color>
@@ -13,7 +23,6 @@
     <color name="progressBarStroke">#444444</color>
     <color name="progressBarEmpty">#ffffffff</color>
     <color name="game_activity_pop_up_bg">#444444</color>
-
-
+    <color name="game_3_fences_stroke_color">#444444</color>
 
 </resources>

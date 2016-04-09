@@ -17,7 +17,9 @@ public class Circle {
     private int value;
     public float x;
     public float y;
-    public float radius;
+    public float radius = 60;
+    public static final float radius_empty = 70;
+    public static final float radius_normal = 60;
     public boolean isStatic = false;
     private boolean isOccupied = false;
     private Animal animal;
@@ -27,17 +29,21 @@ public class Circle {
 
     public static final int LEAVE = -1;
 
-    public Circle(int x, int y, int radius, boolean staticState, Context context, Animal animal, Operation operation) {
+    public Circle(int x, int y, boolean staticState, Context context, Animal animal, Operation operation) {
         this.context = context;
         this.x = x;
         this.animal = animal;
         this.operation = operation;
         this.y = y;
-        this.radius = radius;
         this.isStatic = staticState;
         this.dragX = 0;
         this.dragY = 0;
+        this.radius = radius_normal;
         this.pnt = new Paint(Paint.ANTI_ALIAS_FLAG);
+        if (animal == Animal.EMPTY || animal == Animal.EMPTY2 || operation == Operation.EMPTY){
+            this.radius = radius_empty;
+        }
+
 
     }
 

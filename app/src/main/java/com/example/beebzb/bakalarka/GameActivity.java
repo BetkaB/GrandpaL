@@ -25,9 +25,6 @@ public class GameActivity extends MyActivity {
     public ImageButton solutionsBtn;
     public ImageButton leaveBtn;
 
-    private ImageButton[] left_menu_buttons;
-
-
     // -------- info row -----------
     public TextView title;
     public TextView text;
@@ -244,7 +241,7 @@ public class GameActivity extends MyActivity {
         if (chosenGame == 1) {
             this.text.setText(getResources().getQuantityString(R.plurals.number_of_solutions, 1, 1));
         } else {
-            int solutions = new Solver().getNumberOfSolution(game.getCurrentTask(), chosenLevel == 3);
+            int solutions = new Solver(chosenGame).getNumberOfSolutions(game.getCurrentTask(), chosenLevel == 3);
             String temp = getResources().getQuantityString(R.plurals.number_of_solutions, solutions, solutions);
             this.text.setText(temp);
         }

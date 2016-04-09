@@ -25,9 +25,8 @@
     <string-array name="game_custom_text">
         <item>Teraz hráš vlastný level pre hru <b>Kto vyhrá? </b>. Vyber znamienko a vyjadri, ktorá strana je silnejšia.</item>
         <item>Teraz hráš vlastný level pre hru <b>Kto chýba? </b>. Vyber zviera tak, aby platila rovnosť.</item>
-        <item>Teraz hráš vlastný level pre hru <b>Váhy</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
+        <item>Teraz hráš vlastný level pre hru <b>Ohrady</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
         <item>Teraz hráš vlastný level pre hru <b>Dve stratené zvieratá</b>. Uhádni aké zvieratá sa skrývajú za maskami.</item>
-
     </string-array>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -64,6 +63,11 @@
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="debugging">#9def00f0</color>
+    <color name="dialog_bg">#444444</color>
+    <color name="dialog_info_text_color">#000000</color>
+    <color name="dialog_stroke">#80444444</color>
+    <color name="dialog_title_text_color_negative">#ffa10800</color>
+    <color name="dialog_title_text_color_positive">#ff37a13e</color>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -80,6 +84,7 @@
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="fourth_game">#FEF8A0</color>
+    <color name="game_3_fences_stroke_color">#444444</color>
     <color name="game_activity_pop_up_bg">#444444</color>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -246,19 +251,38 @@
     <dimen name="activity_choose_level_abs_top_bottom">5dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="arrows_side_padding">10dp</dimen>
+    <dimen name="dialog_buttons_side_margin">30dp</dimen>
+    <dimen name="dialog_buttons_side_padding">20dp</dimen>
+    <dimen name="dialog_elements_margin_bottom">15dp</dimen>
+    <dimen name="dialog_info_font_size">24sp</dimen>
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_title_font_size">30sp</dimen>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="editor_fragment_inner_padding">10dp</dimen>
+    <dimen name="editor_fragment_radius_empty_animal">90dp</dimen>
+    <dimen name="editor_fragment_radius_icons">70dp</dimen>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
+    <dimen name="info_row_height">160dp</dimen>
+    <dimen name="info_row_title_bottom_margin">10dp</dimen>
+    <dimen name="info_row_title_top_margin">15dp</dimen>
+    <dimen name="left_menu_buttons_margin">2dp</dimen>
     <dimen name="left_menu_leave_bottom">10dp</dimen>
     <dimen name="left_menu_width">90dp</dimen>
     <dimen name="menu_buttons_radius">150px</dimen>
     <dimen name="menu_buttons_size">120px</dimen>
+    <dimen name="middle_button_top_padding">40px</dimen>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
@@ -266,6 +290,9 @@
     <dimen name="notification_subtext_size">12dp</dimen>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
+    <dimen name="score_row_height">140dp</dimen>
+    <dimen name="score_row_margin_left_and_right">140dp</dimen>
+    <dimen name="screen_title_bottom_margin">20dp</dimen>
     <dimen name="screen_title_top_margin">10dp</dimen>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -287,10 +314,10 @@
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <plurals name="number_of_solutions">
-            <item quantity="one">Táto úloha má %d riešenie.</item>
-            <item quantity="few">Táto úloha má %d riešenia.</item>
-            <item quantity="other">Táto úloha má %d riešení.</item>
-        </plurals>
+        <item quantity="one">Táto úloha má %d riešenie.</item>
+        <item quantity="few">Táto úloha má %d riešenia.</item>
+        <item quantity="other">Táto úloha má %d riešení.</item>
+    </plurals>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -316,11 +343,37 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Zvieratá deda Lesoňa</string>
+    <string name="dialog_task_can_be_saved_info">Môžeš si ju zahrať po výbere vlastnej hry v menu. </string>
+    <string name="dialog_task_can_be_saved_title">Úloha je uložená!</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_1">Na každej strane musí byť minimálne jedno zviera</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_2">Aspoň na jednej strane musí byť minimálne jedno zviera</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_3">Musíš vybrať minimálne 3 zvieratá</string>
+    <string name="dialog_task_cannot_be_saved_info_too_many_animals_12">Presiahol si dovolený počet vybratých zvierat 10</string>
+    <string name="dialog_task_cannot_be_saved_info_too_many_animals_3">Presiahol si dovolený počet vybratých zvierat 18</string>
+    <string name="dialog_task_cannot_be_saved_title">Úlohu nemožno uložiť!</string>
+    <string name="dialog_task_has_no_solution_info">Túto úlohu nemožno uložiť</string>
+    <string name="dialog_task_has_no_solution_title">Takáto úloha nemá riešenie!</string>
+    <string name="dialog_task_has_solution_info">Môžeš ju uložiť a po výbere v menu si ju môžeš zahrať</string>
+    <string name="dialog_task_has_solution_title">Tvoja úloha má riešenie!</string>
+    <string name="editor_button_23">Zisti, či má tvoja úloha riešenie</string>
+    <string name="editor_empty">Prázdne koliesko bude:</string>
+    <string name="editor_empty_on_left">naľavo</string>
+    <string name="editor_empty_on_right">napravo</string>
+    <string name="editor_left">ľavá strana</string>
+    <string name="editor_right">pravá strana</string>
+    <string name="editor_text_game_1">Zvoľ zvieratá pre obe strany. Nezabudni, že na každej musí byť minimálne jedno zviera a spolu ich môže byť najviac 10.</string>
+    <string name="editor_text_game_2">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s prázdnym políčkom môže byť najviac 10. Môžeš zvoliť, na ktorej strane sa bude nachádzať prázdne políčko.</string>
+    <string name="editor_text_game_3">Vyber počet zvierat ktoré chceš v hre použiť. Počet zvierat musí byť od 3 do 18 a zvieratá sa musia dať rozdeliť do 3 ohrád.</string>
+    <string name="editor_text_game_4">... text pre editor pre 4 hru.</string>
+    <string name="editor_title_game_1">Vytváraš vlastnú úlohu pre hru <b>Kto vyhrá?</b></string>
+    <string name="editor_title_game_2">Vytváraš vlastnú úlohu pre hru <b>Kto chýba?</b></string>
+    <string name="editor_title_game_3">Vytváraš vlastnú úlohu pre hru <b>Ohrady </b></string>
+    <string name="editor_title_game_4">Vytváraš vlastnú úlohu pre hru <b>Dve masky</b></string>
     <string name="gameHandler">Hra</string>
     <string name="game_1">Kto vyhrá?</string>
     <string name="game_2">Kto chýba?</string>
-    <string name="game_3">Váhy</string>
-    <string name="game_4">Dve stratené zvieratá</string>
+    <string name="game_3">Ohrady</string>
+    <string name="game_4">Dve masky</string>
     <string name="game_activity_help">Legenda</string>
     <string name="game_activity_solutions">Riešenie</string>
     <string name="game_activity_task_solutions">Táto úloha má %d </string>
@@ -333,13 +386,15 @@
     <string name="pop_up_correct_answer_3">Dobrá práca! </string>
     <string name="pop_up_correct_answer_4">Len tak ďalej!</string>
     <string name="pop_up_correct_answer_5">Si šikovný!</string>
+    <string name="pre_editor_dialog_cannot_create_task_info">Najskôr musíš prejsť všetky 3 úrovne vybratej hry.</string>
+    <string name="pre_editor_dialog_cannot_create_task_title">Nemôžeš vytvoriť vlastnú úlohu</string>
     <string name="score">Body</string>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="title_activity_choose_level">~ Výber si hru a úroveň, ktorú chceš hrať ~</string>
+    <string name="title_activity_choose_level">~ Vyber si hru a úroveň, ktorú chceš hrať ~</string>
     <string name="title_activity_create_level">~ Tu si môžeš vytvoriť vlastnú úlohu pre každú hru ~</string>
     <string name="title_activity_editor_first_game">EditorFirstGameActivity</string>
     <string name="title_activity_game">GameActivity</string>
@@ -1305,6 +1360,52 @@
         <item name="android:background">@drawable/rounded_row</item>
 
 
+    </style>
+    <style name="CustomDialogButton">
+        <item name="android:textAllCaps">true</item>
+       <item name="android:layout_marginLeft">@dimen/dialog_buttons_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/dialog_buttons_side_margin</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+        <item name="android:paddingLeft">@dimen/dialog_buttons_side_padding</item>
+        <item name="android:paddingRight">@dimen/dialog_buttons_side_padding</item>
+
+    </style>
+    <style name="CustomDialogInfo">
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">@dimen/dialog_info_font_size</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">@color/dialog_info_text_color</item>
+
+    </style>
+    <style name="CustomDialogTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:textSize">@dimen/dialog_title_font_size</item>
+        <item name="android:layout_marginBottom">@dimen/dialog_elements_margin_bottom</item>
+    </style>
+    <style name="EditorAnimalIcon">
+        <item name="android:paddingRight">10dp</item>
+    </style>
+    <style name="EditorAnimalIconRightInRow" parent="EditorAnimalIcon">
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+    <style name="EditorRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="EditorText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/screen_title_top_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/screen_title_bottom_margin</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="EditorVerticalLine">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
     </style>
     <style name="GameButton" parent="LeftMenuButton">
         <item name="android:src">@drawable/info</item>

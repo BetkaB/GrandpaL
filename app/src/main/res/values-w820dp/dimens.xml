@@ -17,4 +17,23 @@
     <dimen name="info_row_title_bottom_margin">10dp</dimen>
 
     <dimen name="middle_button_top_padding">40px</dimen>
+
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_title_font_size">30sp</dimen>
+    <dimen name="dialog_elements_margin_bottom">15dp</dimen>
+    <dimen name="dialog_info_font_size">24sp</dimen>
+    <dimen name="dialog_buttons_side_padding">20dp</dimen>
+    <dimen name="dialog_buttons_side_margin">30dp</dimen>
+
+
+
+
+
+
+
+
+    <dimen name="editor_fragment_inner_padding">15dp</dimen>
+    <dimen name="editor_fragment_radius_icons">70dp</dimen>
+    <dimen name="editor_fragment_radius_empty_animal">90dp</dimen>
+
 </resources>

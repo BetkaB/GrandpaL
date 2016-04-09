@@ -39,7 +39,7 @@
             android:label="@string/title_activity_my" >
         </activity>
         <activity
-            android:name="com.example.beebzb.bakalarka.EditorFirstGameActivity"
+            android:name="com.example.beebzb.bakalarka.EditorActivity"
             android:label="@string/title_activity_editor_first_game" >
         </activity>
         <activity

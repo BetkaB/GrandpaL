@@ -5,7 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.os.Message;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -20,9 +22,15 @@ public class MyCanvas extends View implements View.OnTouchListener {
     public static final int BOTTOM_ROW_HEIGHT = 200;
     public static int Y_BOTTOM_ROW_CENTER = 0;
     public static int X_BOTTOM_ROW_CENTER = 0;
-    private final int PROGRESS_BAR_SIDE_PADDING = 150;
-    private final int PROGRESS_BAR_BOTTOM_PADDING = 30;
-    private final int PROGRESS_BAR_HEIGHT = 45;
+
+    public static final int FENCES_SIDE_PADDING = 150;
+    public static final int FENCES_TOP_BOTTOM_PADDING = 130;
+
+    public static final int INIT_SIZE_CANVAS = 10;
+
+    public static final int PROGRESS_BAR_SIDE_PADDING = 150;
+    public static final int PROGRESS_BAR_BOTTOM_PADDING = 30;
+    public static final int PROGRESS_BAR_HEIGHT = 45;
     private Paint paint ;
 
     public MyCanvas(Context context, AttributeSet attrs) {
@@ -34,7 +42,7 @@ public class MyCanvas extends View implements View.OnTouchListener {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);;
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
         drawBottomRow(canvas);
         drawProgressBar(canvas);
@@ -78,8 +86,6 @@ public class MyCanvas extends View implements View.OnTouchListener {
         paint.setStrokeWidth(0);
         paint.setColor(getResources().getColor(gameHandler.getGameColor()));
         canvas.drawRect(0, this.getHeight() - BOTTOM_ROW_HEIGHT, this.getWidth(), this.getHeight(), paint);
-        Y_BOTTOM_ROW_CENTER = this.getHeight() - (BOTTOM_ROW_HEIGHT/2);
-        X_BOTTOM_ROW_CENTER = this.getWidth()/2;
     }
 
 
@@ -117,14 +123,6 @@ public class MyCanvas extends View implements View.OnTouchListener {
         canvasHeight = h;
         hasUpdatedSize = true;
 
-         /*
-        -> notify gameHandler object about size change
-
-        if (hasUpdatedSize) {
-            gameObject.changeSize(canvasWidth, canvasHeight);
-        }
-        */
-
 
         setMeasuredDimension(w, h);
     }
@@ -134,13 +132,28 @@ public class MyCanvas extends View implements View.OnTouchListener {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         canvasWidth = w;
         canvasHeight = h;
+        Y_BOTTOM_ROW_CENTER = this.canvasHeight - (BOTTOM_ROW_HEIGHT/2);
+        X_BOTTOM_ROW_CENTER = this.canvasWidth/2;
         gameHandler.resizeWidget(w, h);
         //hasUpdatedSize = true;
+        Log.d("CANVAS", "onSizeChanged!");
+        Message msg = gameHandler.mHandler.obtainMessage(INIT_SIZE_CANVAS);
+        msg.sendToTarget();
+
         super.onSizeChanged(w, h, oldw, oldh);
     }
 
     public int getCanvasHeight(){
         return getHeight() - PROGRESS_BAR_BOTTOM_PADDING - PROGRESS_BAR_HEIGHT - BOTTOM_ROW_HEIGHT;
+    }
+
+    public Paint getFencesPaint(){
+        Paint fencesPaint = new Paint();
+        fencesPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+        fencesPaint.setStyle(Paint.Style.STROKE);
+        fencesPaint.setStrokeWidth(4);
+        fencesPaint.setColor(getResources().getColor(R.color.game_3_fences_stroke_color));
+        return fencesPaint;
     }
 
 

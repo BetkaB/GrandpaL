@@ -16,7 +16,8 @@ public enum Animal {
     RAM(6, R.drawable.ram),
     COW(10, R.drawable.cow),
     HORSE(20, R.drawable.horse),
-    EMPTY(0, R.drawable.empty);
+    EMPTY(0, R.drawable.empty),
+    EMPTY2(0, R.drawable.empty2);
 
     private int value;
     private int drawable;
@@ -43,11 +44,11 @@ public enum Animal {
     private static final Random RANDOM = new Random();
 
     public static Animal randomAnimal() {
-        return VALUES.get(RANDOM.nextInt(SIZE - 3));
+        return VALUES.get(RANDOM.nextInt(SIZE - 4));
     }
 
     public static Animal randomFromAllAnimals() {
-        return VALUES.get(RANDOM.nextInt(SIZE - 1));
+        return VALUES.get(RANDOM.nextInt(SIZE - 2));
     }
 
     public static Animal getRandomAnimalBasedOnLevel(int chosenLevel) {
@@ -58,10 +59,6 @@ public enum Animal {
                 return randomAnimal();
 
         }
-    }
-
-    public Animal[] lowLevelAnimals() {
-        return new Animal[]{};
     }
 
 }
