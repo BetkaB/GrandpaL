@@ -128,25 +128,32 @@
         </LinearLayout>
 
         <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="com.example.beebzb.bakalarka.EditorGame1Fragment"
             android:id="@+id/editorGame1"
+            android:name="com.example.beebzb.bakalarka.fragments.EditorGame1Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal" />
 
         <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="com.example.beebzb.bakalarka.EditorGame2Fragment"
             android:id="@+id/editorGame2"
+            android:name="com.example.beebzb.bakalarka.fragments.EditorGame2Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal" />
 
         <fragment
+            android:id="@+id/editorGame3"
+            android:name="com.example.beebzb.bakalarka.fragments.EditorGame3Fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.beebzb.bakalarka.EditorGame3Fragment"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/editorGame3" />
+            android:layout_gravity="center_horizontal" />
+
+        <fragment
+            android:id="@+id/editorGame4"
+            android:name="com.example.beebzb.bakalarka.fragments.EditorGame4Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
 
 
     </LinearLayout>

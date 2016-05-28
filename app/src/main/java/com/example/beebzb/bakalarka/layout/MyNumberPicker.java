@@ -14,7 +14,7 @@ import com.example.beebzb.bakalarka.R;
 public class MyNumberPicker extends LinearLayout {
 
     private int number = 0;
-    private final int MAX = 10;
+    private final int MAX = 9;
 
     private Button plus;
     private Button minus;

@@ -39,7 +39,7 @@
     <string name="editor_text_game_1">Zvoľ zvieratá pre obe strany. Nezabudni, že na každej musí byť minimálne jedno zviera a spolu ich môže byť najviac 10.</string>
     <string name="editor_text_game_2">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s prázdnym políčkom môže byť najviac 10. Môžeš zvoliť, na ktorej strane sa bude nachádzať prázdne políčko.</string>
     <string name="editor_text_game_3">Vyber počet zvierat ktoré chceš v hre použiť. Počet zvierat musí byť od 3 do 18 a zvieratá sa musia dať rozdeliť do 3 ohrád.</string>
-    <string name="editor_text_game_4">... text pre editor pre 4 hru.</string>
+    <string name="editor_text_game_4">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s maskami môže byť najviac 10. Musíš použiť obe masky, pričom každú z nich najviac 2 krát. </string>
 
     <string name="editor_title_game_1">Vytváraš vlastnú úlohu pre hru <b>Kto vyhrá?</b></string>
     <string name="editor_title_game_2">Vytváraš vlastnú úlohu pre hru <b>Kto chýba?</b></string>
@@ -79,6 +79,12 @@
         <item quantity="other">Táto úloha má %d riešení.</item>
     </plurals>
 
+    <plurals name="number_of_solutions_game_3">
+        <item quantity="one">Táto úloha má minimálne %d riešenie.</item>
+        <item quantity="few">Táto úloha má minimálne %d riešenia.</item>
+        <item quantity="other">Táto úloha má minimálne %d riešení.</item>
+    </plurals>
+
     <string name="editor_left">ľavá strana</string>
     <string name="editor_right">pravá strana</string>
     <string name="editor_empty">Prázdne koliesko bude:</string>
@@ -94,7 +100,15 @@
     <string name="dialog_task_cannot_be_saved_title">Úlohu nemožno uložiť!</string>
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_2">Aspoň na jednej strane musí byť minimálne jedno zviera</string>
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_1">Na každej strane musí byť minimálne jedno zviera</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_4">Potrebuješ vybrať minimálne 3 zvieratá alebo masky</string>
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_3">Musíš vybrať minimálne 3 zvieratá</string>
+
+    <string name="dialog_task_cannot_be_saved_too_few_variables">Musíš použiť obe masky</string>
+    <string name="dialog_task_cannot_be_saved_too_many_variables">Každú masku môžeš použiť najviac 2 krát</string>
+    <string name="dialog_task_cannot_be_saved_too_many_variables_and_animals">Vybraté zvieratá a masky nesmú presiahnuť počet 10</string>
+
+
+
 
     <string name="dialog_task_cannot_be_saved_info_too_many_animals_12">Presiahol si dovolený počet vybratých zvierat 10</string>
     <string name="dialog_task_cannot_be_saved_info_too_many_animals_3">Presiahol si dovolený počet vybratých zvierat 18</string>

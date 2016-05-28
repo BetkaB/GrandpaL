@@ -1,9 +1,15 @@
 package com.example.beebzb.bakalarka.entity;
 
+import android.content.Context;
 import android.graphics.Paint;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.example.beebzb.bakalarka.ChooseLevelActivity;
+import com.example.beebzb.bakalarka.EditorActivity;
+import com.example.beebzb.bakalarka.GameActivity;
 import com.example.beebzb.bakalarka.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -14,20 +20,44 @@ public class Game {
     private Solver solver;
     private Generator generator;
     private ArrayList<Task> tasks = new ArrayList<Task>();
-    private final int NUMBER_OF_TASKS = 5;
+    public static final int NUMBER_OF_TASKS = 5;
+    public static final int NUMBER_OF_CUSTOM_TASK = 1;
     private int completed_tasks = 0;
     private int color;
+    private int numberOfTasks = 0;
+    private boolean customMode = false;
+    private Context context;
 
-    public Game(int color, int chosenGame, int chosenLevel) {
+    public Game(Context context, int color, int chosenGame, int chosenLevel) {
         this.color = color;
-        generator = new Generator(chosenGame, chosenLevel);
+        this.context = context;
         this.chosenGame = chosenGame;
         this.chosenLevel = chosenLevel;
-        solver = new Solver(chosenGame);
-        tasks = generator.generateTasks(NUMBER_OF_TASKS);
+        customMode = chosenGame == 0;
+        if (customMode){
+            tasks.add(getCustomTaskFromSP(chosenLevel));
+            numberOfTasks = NUMBER_OF_CUSTOM_TASK;
+            solver = new Solver(chosenLevel);
+        }
+        else {
+            numberOfTasks = NUMBER_OF_TASKS;
+            generator = new Generator(chosenGame, chosenLevel);
+            tasks = generator.generateTasks(numberOfTasks);
+            solver = new Solver(chosenGame);
+
+
+        }
         getNextTask();
+        //Test.main();
     }
 
+    private Task getCustomTaskFromSP(int chosenLevel) {
+        Gson gson = new Gson();
+        String key = ChooseLevelActivity.getKeyByChosenLevel(chosenLevel);
+        String json = PreferenceManager.getDefaultSharedPreferences(context).getString(key, EditorActivity.DEFAULT_TASK);
+        Task task = gson.fromJson(json, Task.class);
+        return task;
+    }
 
 
     public Task getCurrentTask() {
@@ -35,11 +65,11 @@ public class Game {
     }
 
     public int getNUMBER_OF_TASKS() {
-        return NUMBER_OF_TASKS;
+        return numberOfTasks;
     }
 
     public double getProgress() {
-        return 100 / NUMBER_OF_TASKS * completed_tasks;
+        return 100 / numberOfTasks * completed_tasks;
     }
 
     public void setCurrentTask(Task currentTask) {
@@ -59,15 +89,14 @@ public class Game {
     }
 
     public boolean isCurrentTaskSolved() {
-        Log.d("BUG_SECOND_GAME", currentTask.toString());
         return solver.isSolved(currentTask);
     }
 
-    public boolean areAllTasksCompleted(){
-        return completed_tasks == NUMBER_OF_TASKS;
+    public boolean areAllTasksCompleted() {
+        return completed_tasks == numberOfTasks;
     }
 
-    public void incrementCompletedTasks(){
+    public void incrementCompletedTasks() {
         completed_tasks++;
     }
 
@@ -75,4 +104,7 @@ public class Game {
         return color;
     }
 
+    public boolean isCustomMode() {
+        return customMode;
+    }
 }

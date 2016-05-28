@@ -1,20 +1,21 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.fragments;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.beebzb.bakalarka.R;
 import com.example.beebzb.bakalarka.entity.Generator;
 import com.example.beebzb.bakalarka.entity.Solver;
 import com.example.beebzb.bakalarka.entity.Task;
-import com.example.beebzb.bakalarka.enums.Animal;
+import com.example.beebzb.bakalarka.entity.enums.Animal;
+import com.example.beebzb.bakalarka.layout.MyDialog;
 import com.example.beebzb.bakalarka.layout.MyNumberPicker;
 import com.google.gson.Gson;
 
@@ -82,7 +83,7 @@ public class EditorGame3Fragment extends Fragment {
     }
 
     private boolean hasSolution(Task task) {
-        int solutions = solver.getNumberOfSolutionGame_3(task, true);
+        int solutions = solver.getNumberOfSolutionGame_3(task);
         return solutions > 0;
     }
 
@@ -121,7 +122,9 @@ public class EditorGame3Fragment extends Fragment {
     }
 
     public void onSaveClicked() {
-        showPopUp(getSavingResult());
+        int result = getSavingResult();
+        showPopUp(result);
+
     }
 
     private int getSavingResult() {
@@ -166,12 +169,9 @@ public class EditorGame3Fragment extends Fragment {
     }
 
     private void save(Task task) {
-        SharedPreferences mPrefs = getActivity().getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(task);
-        prefsEditor.putString(SAVED_TASK_GAME3, json);
-        prefsEditor.commit();
+        PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putString(SAVED_TASK_GAME3, json).apply();
 
     }
 

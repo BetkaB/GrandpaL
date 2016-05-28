@@ -1,8 +1,6 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.fragments;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -11,10 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.beebzb.bakalarka.R;
 import com.example.beebzb.bakalarka.entity.Generator;
 import com.example.beebzb.bakalarka.entity.Task;
-import com.example.beebzb.bakalarka.enums.Animal;
-import com.example.beebzb.bakalarka.enums.Operation;
+import com.example.beebzb.bakalarka.entity.enums.Animal;
+import com.example.beebzb.bakalarka.entity.enums.Operation;
+import com.example.beebzb.bakalarka.layout.MyDialog;
 import com.example.beebzb.bakalarka.layout.MyNumberPicker;
 import com.google.gson.Gson;
 
@@ -36,7 +36,7 @@ public class EditorGame1Fragment extends Fragment {
     private MyNumberPicker leftCow;
     private MyNumberPicker leftHorse;
 
-    MyNumberPicker[] leftPickers ;
+    MyNumberPicker[] leftPickers;
 
     private MyNumberPicker rightMouse;
     private MyNumberPicker rightCat;
@@ -91,7 +91,7 @@ public class EditorGame1Fragment extends Fragment {
 
     private int countAnimalsOnSide(MyNumberPicker[] pickers) {
         int res = 0;
-        for (MyNumberPicker picker : pickers){
+        for (MyNumberPicker picker : pickers) {
             res += picker.getNumber();
         }
         return res;
@@ -113,22 +113,9 @@ public class EditorGame1Fragment extends Fragment {
     }
 
     private void save(Task task) {
-        // TODO from data to json - save to sharedPref
-        SharedPreferences mPrefs = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(task);
-      /*  prefsEditor.putString(SAVED_TASK_GAME1, json);
-        prefsEditor.commit();*/
-
         PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putString(SAVED_TASK_GAME1, json).apply();
-
-
-      /*  Gson gson2 = new Gson();
-        String json1 = mPrefs.getString(EditorGame1Fragment.SAVED_TASK_GAME1, "");
-        Task obj = gson2.fromJson(json1, Task.class);
-        Log.e("ED1",obj.toString());*/
     }
 
     private int getSavingResult() {
@@ -146,40 +133,28 @@ public class EditorGame1Fragment extends Fragment {
     private Task createTaskFromLayout() {
         Task task = new Task(1, 3);
         task.setOperation(Operation.EMPTY);
-        task.setLeftSide(getLeftSideFromLayout());
-        task.setRightSide(getRightSideFromLayout());
+        task.setLeftSide(getSideFromLayout(leftPickers));
+        task.setRightSide(getSideFromLayout(rightPickers));
         Log.e("ED1", task.toString());
         return task;
     }
 
     public void onSaveClicked() {
         int res = getSavingResult();
-        if (res == CAN_BE_SAVED){
+        if (res == CAN_BE_SAVED) {
             save(createTaskFromLayout());
         }
         showPopUp(res);
     }
 
-    public ArrayList<Animal> getLeftSideFromLayout() {
-        ArrayList<Animal> left = new ArrayList<Animal>();
-        for (int pic = 0; pic < leftPickers.length; pic++) {
-            int count = leftPickers[pic].getNumber();
+    public ArrayList<Animal> getSideFromLayout(MyNumberPicker[] pickers) {
+        ArrayList<Animal> side = new ArrayList<Animal>();
+        for (int pic = 0; pic < pickers.length; pic++) {
+            int count = pickers[pic].getNumber();
             for (int i = 0; i < count; i++) {
-                left.add(Animal.hard[pic]);
+                side.add(Animal.hard[pic]);
             }
         }
-
-        return left;
-    }
-
-    public ArrayList<Animal> getRightSideFromLayout() {
-        ArrayList<Animal> right = new ArrayList<Animal>();
-        for (int pic = 0; pic < rightPickers.length; pic++) {
-            int count = rightPickers[pic].getNumber();
-            for (int i = 0; i < count; i++) {
-                right.add(Animal.hard[pic]);
-            }
-        }
-        return right;
+        return side;
     }
 }

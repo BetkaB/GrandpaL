@@ -1,4 +1,4 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.entity;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.beebzb.bakalarka.entity.GameHandler;
+import com.example.beebzb.bakalarka.R;
 import com.example.beebzb.bakalarka.layout.MyRoundedRect;
 
 public class MyCanvas extends View implements View.OnTouchListener {
@@ -19,19 +19,19 @@ public class MyCanvas extends View implements View.OnTouchListener {
     private boolean isReady = false, hasUpdatedSize = false;
     private Paint pnt;
     public int canvasWidth, canvasHeight;
-    public static final int BOTTOM_ROW_HEIGHT = 200;
+    public static final int BOTTOM_ROW_HEIGHT = 150;
     public static int Y_BOTTOM_ROW_CENTER = 0;
     public static int X_BOTTOM_ROW_CENTER = 0;
 
-    public static final int FENCES_SIDE_PADDING = 150;
-    public static final int FENCES_TOP_BOTTOM_PADDING = 130;
+    public static final int FENCES_SIDE_PADDING = 80;
+    public static final int FENCES_TOP_BOTTOM_PADDING = 50;
 
     public static final int INIT_SIZE_CANVAS = 10;
 
-    public static final int PROGRESS_BAR_SIDE_PADDING = 150;
-    public static final int PROGRESS_BAR_BOTTOM_PADDING = 30;
-    public static final int PROGRESS_BAR_HEIGHT = 45;
-    private Paint paint ;
+    public static final int PROGRESS_BAR_SIDE_PADDING = 80;
+    public static final int PROGRESS_BAR_BOTTOM_PADDING = 10;
+    public static final int PROGRESS_BAR_HEIGHT = 30;
+    private Paint paint;
 
     public MyCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -132,8 +132,8 @@ public class MyCanvas extends View implements View.OnTouchListener {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         canvasWidth = w;
         canvasHeight = h;
-        Y_BOTTOM_ROW_CENTER = this.canvasHeight - (BOTTOM_ROW_HEIGHT/2);
-        X_BOTTOM_ROW_CENTER = this.canvasWidth/2;
+        Y_BOTTOM_ROW_CENTER = this.canvasHeight - (BOTTOM_ROW_HEIGHT / 2);
+        X_BOTTOM_ROW_CENTER = this.canvasWidth / 2;
         gameHandler.resizeWidget(w, h);
         //hasUpdatedSize = true;
         Log.d("CANVAS", "onSizeChanged!");
@@ -143,19 +143,9 @@ public class MyCanvas extends View implements View.OnTouchListener {
         super.onSizeChanged(w, h, oldw, oldh);
     }
 
-    public int getCanvasHeight(){
+    public int getCanvasHeight() {
         return getHeight() - PROGRESS_BAR_BOTTOM_PADDING - PROGRESS_BAR_HEIGHT - BOTTOM_ROW_HEIGHT;
     }
-
-    public Paint getFencesPaint(){
-        Paint fencesPaint = new Paint();
-        fencesPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-        fencesPaint.setStyle(Paint.Style.STROKE);
-        fencesPaint.setStrokeWidth(4);
-        fencesPaint.setColor(getResources().getColor(R.color.game_3_fences_stroke_color));
-        return fencesPaint;
-    }
-
 
 
 

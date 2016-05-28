@@ -1,4 +1,4 @@
-package com.example.beebzb.bakalarka.enums;
+package com.example.beebzb.bakalarka.entity.enums;
 
 import com.example.beebzb.bakalarka.R;
 
@@ -17,7 +17,8 @@ public enum Animal {
     COW(10, R.drawable.cow),
     HORSE(20, R.drawable.horse),
     EMPTY(0, R.drawable.empty),
-    EMPTY2(0, R.drawable.empty2);
+    EMPTY2(0, R.drawable.empty2),
+    EMPTY_INVISIBLE (0, R.drawable.empty4);
 
     private int value;
     private int drawable;
@@ -44,11 +45,11 @@ public enum Animal {
     private static final Random RANDOM = new Random();
 
     public static Animal randomAnimal() {
-        return VALUES.get(RANDOM.nextInt(SIZE - 4));
+        return VALUES.get(RANDOM.nextInt(SIZE - 5));
     }
 
     public static Animal randomFromAllAnimals() {
-        return VALUES.get(RANDOM.nextInt(SIZE - 2));
+        return VALUES.get(RANDOM.nextInt(SIZE - 3));
     }
 
     public static Animal getRandomAnimalBasedOnLevel(int chosenLevel) {

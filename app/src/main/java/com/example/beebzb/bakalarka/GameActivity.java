@@ -13,8 +13,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.beebzb.bakalarka.entity.Constants;
 import com.example.beebzb.bakalarka.entity.Game;
 import com.example.beebzb.bakalarka.entity.GameHandler;
+import com.example.beebzb.bakalarka.entity.MyCanvas;
 import com.example.beebzb.bakalarka.entity.Solver;
 
 
@@ -98,7 +100,7 @@ public class GameActivity extends MyActivity {
         }
 
         final MyCanvas myCanvas = (MyCanvas) findViewById(R.id.view);
-        game = new Game(colorInt, chosenGame, chosenLevel);
+        game = new Game(getBaseContext(), colorInt, chosenGame, chosenLevel);
         myCanvas.setGameHandler(new GameHandler(getBaseContext(), game, myCanvas, this));
         myCanvas.postInvalidate();
 
@@ -148,6 +150,7 @@ public class GameActivity extends MyActivity {
                         }
 
                         myCanvas.updateDelta(delta);
+                        myCanvas.updateDelta(delta);
                         myCanvas.postInvalidate();
 
                         sleepTime = (lastLoopTime - System.currentTimeMillis() + OPTIMAL_TIME) / 1000000;
@@ -157,7 +160,8 @@ public class GameActivity extends MyActivity {
                         //handler.post(this);
                     }
                 } catch (Exception e) {
-                    Log.e("THREAD", "interrupted");
+                    Log.d("THREAD", "interrupted");
+                    Log.d("THREAD",e.toString());
                     e.printStackTrace();
                 }
             }
@@ -238,12 +242,14 @@ public class GameActivity extends MyActivity {
         this.text.setVisibility(View.VISIBLE);
         this.helpImView.setVisibility(View.GONE);
         this.title.setText(solutions);
-        if (chosenGame == 1) {
-            this.text.setText(getResources().getQuantityString(R.plurals.number_of_solutions, 1, 1));
-        } else {
-            int solutions = new Solver(chosenGame).getNumberOfSolutions(game.getCurrentTask(), chosenLevel == 3);
-            String temp = getResources().getQuantityString(R.plurals.number_of_solutions, solutions, solutions);
-            this.text.setText(temp);
+
+        int solutions = new Solver(chosenGame).getNumberOfSolutions(game.getCurrentTask(), chosenLevel == 3);
+
+        if (chosenGame == 3 || (chosenGame == 0 && chosenLevel==3)) {
+            this.text.setText(getResources().getQuantityString(R.plurals.number_of_solutions_game_3, solutions, solutions));
+        }
+        else {
+            this.text.setText(getResources().getQuantityString(R.plurals.number_of_solutions, solutions, solutions));
         }
 
     }

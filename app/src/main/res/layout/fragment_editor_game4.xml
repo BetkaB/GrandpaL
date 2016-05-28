@@ -1,0 +1,460 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.beebzb.bakalarka.fragments.EditorGame4Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/editor_fragment_inner_padding"
+        android:orientation="horizontal"
+        android:padding="@dimen/editor_fragment_inner_padding"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/leftSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/leftText"
+                style="@style/EditorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editor_left" />
+
+            <LinearLayout
+                android:id="@+id/leftLinesContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/L1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftMouseImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/mouse" />
+
+                    <view
+                        android:id="@+id/leftMouse"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/leftCatImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/cat" />
+
+                    <view
+                        android:id="@+id/leftCat"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftGooseImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/goose" />
+
+                    <view
+                        android:id="@+id/leftGoose"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/leftDogImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/dog" />
+
+                    <view
+                        android:id="@+id/leftDog"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftGoatImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/goat" />
+
+                    <view
+                        android:id="@+id/leftGoat"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/leftRamImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/ram" />
+
+                    <view
+                        android:id="@+id/leftRam"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftCowImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/cow" />
+
+                    <view
+                        android:id="@+id/leftCow"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/leftHorseImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/horse" />
+
+                    <view
+                        android:id="@+id/leftHorse"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftEmpty1Img"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/empty" />
+
+                    <view
+                        android:id="@+id/left_x"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/leftEmpty2Img"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/empty2" />
+
+                    <view
+                        android:id="@+id/left_y"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/fourth_game" />
+
+        <LinearLayout
+            android:id="@+id/rightSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rightText"
+                style="@style/EditorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editor_right" />
+
+            <LinearLayout
+                android:id="@+id/rightLinesContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/R1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightMouseImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/mouse" />
+
+                    <view
+                        android:id="@+id/rightMouse"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/rightCatImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/cat" />
+
+                    <view
+                        android:id="@+id/rightCat"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/R2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightGooseImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/goose" />
+
+                    <view
+                        android:id="@+id/rightGoose"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/rightDogImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/dog" />
+
+                    <view
+                        android:id="@+id/rightDog"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightGoatImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/goat" />
+
+                    <view
+                        android:id="@+id/rightGoat"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/rightRamImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/ram" />
+
+                    <view
+                        android:id="@+id/rightRam"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/R4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightCowImg"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/cow" />
+
+                    <view
+                        android:id="@+id/rightCow"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/rightHorseImg"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/horse" />
+
+                    <view
+                        android:id="@+id/rightHorse"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/R5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightEmpty1Img"
+                        style="@style/EditorAnimalIcon"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/empty" />
+
+                    <view
+                        android:id="@+id/right_x"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/rightEmpty2Img"
+                        style="@style/EditorAnimalIconRightInRow"
+                        android:layout_width="@dimen/editor_fragment_radius_icons"
+                        android:layout_height="@dimen/editor_fragment_radius_icons"
+                        android:src="@drawable/empty2" />
+
+                    <view
+                        android:id="@+id/right_y"
+                        class="com.example.beebzb.bakalarka.layout.MyNumberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/EditorVerticalLine"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/fourth_game" />
+
+    <LinearLayout
+        android:id="@+id/bottomRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/hasSolutionButton"
+            style="@style/CustomDialogButton"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/editor_button_23" />
+
+    </LinearLayout>
+
+</LinearLayout>

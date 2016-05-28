@@ -246,56 +246,14 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="activity_choose_level_abs_top_bottom">5dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="arrows_side_padding">10dp</dimen>
-    <dimen name="dialog_buttons_side_margin">30dp</dimen>
-    <dimen name="dialog_buttons_side_padding">20dp</dimen>
-    <dimen name="dialog_elements_margin_bottom">15dp</dimen>
-    <dimen name="dialog_info_font_size">24sp</dimen>
-    <dimen name="dialog_padding">20dp</dimen>
-    <dimen name="dialog_title_font_size">30sp</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
-    <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="editor_fragment_inner_padding">10dp</dimen>
-    <dimen name="editor_fragment_radius_empty_animal">90dp</dimen>
-    <dimen name="editor_fragment_radius_icons">70dp</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
-    <eat-comment/>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="info_row_height">160dp</dimen>
-    <dimen name="info_row_title_bottom_margin">10dp</dimen>
-    <dimen name="info_row_title_top_margin">15dp</dimen>
-    <dimen name="left_menu_buttons_margin">2dp</dimen>
-    <dimen name="left_menu_leave_bottom">10dp</dimen>
-    <dimen name="left_menu_width">90dp</dimen>
-    <dimen name="menu_buttons_radius">150px</dimen>
-    <dimen name="menu_buttons_size">120px</dimen>
-    <dimen name="middle_button_top_padding">40px</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
-    <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/dimens.xml -->
-    <eat-comment/>
-    <dimen name="score_row_height">140dp</dimen>
-    <dimen name="score_row_margin_left_and_right">140dp</dimen>
-    <dimen name="screen_title_bottom_margin">20dp</dimen>
-    <dimen name="screen_title_top_margin">10dp</dimen>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
-    <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -317,6 +275,11 @@
         <item quantity="one">Táto úloha má %d riešenie.</item>
         <item quantity="few">Táto úloha má %d riešenia.</item>
         <item quantity="other">Táto úloha má %d riešení.</item>
+    </plurals>
+    <plurals name="number_of_solutions_game_3">
+        <item quantity="one">Táto úloha má minimálne %d riešenie.</item>
+        <item quantity="few">Táto úloha má minimálne %d riešenia.</item>
+        <item quantity="other">Táto úloha má minimálne %d riešení.</item>
     </plurals>
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -348,9 +311,13 @@
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_1">Na každej strane musí byť minimálne jedno zviera</string>
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_2">Aspoň na jednej strane musí byť minimálne jedno zviera</string>
     <string name="dialog_task_cannot_be_saved_info_too_few_animals_3">Musíš vybrať minimálne 3 zvieratá</string>
+    <string name="dialog_task_cannot_be_saved_info_too_few_animals_4">Potrebuješ vybrať minimálne 3 zvieratá alebo masky</string>
     <string name="dialog_task_cannot_be_saved_info_too_many_animals_12">Presiahol si dovolený počet vybratých zvierat 10</string>
     <string name="dialog_task_cannot_be_saved_info_too_many_animals_3">Presiahol si dovolený počet vybratých zvierat 18</string>
     <string name="dialog_task_cannot_be_saved_title">Úlohu nemožno uložiť!</string>
+    <string name="dialog_task_cannot_be_saved_too_few_variables">Musíš použiť obe masky</string>
+    <string name="dialog_task_cannot_be_saved_too_many_variables">Každú masku môžeš použiť najviac 2 krát</string>
+    <string name="dialog_task_cannot_be_saved_too_many_variables_and_animals">Vybraté zvieratá a masky nesmú presiahnuť počet 10</string>
     <string name="dialog_task_has_no_solution_info">Túto úlohu nemožno uložiť</string>
     <string name="dialog_task_has_no_solution_title">Takáto úloha nemá riešenie!</string>
     <string name="dialog_task_has_solution_info">Môžeš ju uložiť a po výbere v menu si ju môžeš zahrať</string>
@@ -364,7 +331,7 @@
     <string name="editor_text_game_1">Zvoľ zvieratá pre obe strany. Nezabudni, že na každej musí byť minimálne jedno zviera a spolu ich môže byť najviac 10.</string>
     <string name="editor_text_game_2">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s prázdnym políčkom môže byť najviac 10. Môžeš zvoliť, na ktorej strane sa bude nachádzať prázdne políčko.</string>
     <string name="editor_text_game_3">Vyber počet zvierat ktoré chceš v hre použiť. Počet zvierat musí byť od 3 do 18 a zvieratá sa musia dať rozdeliť do 3 ohrád.</string>
-    <string name="editor_text_game_4">... text pre editor pre 4 hru.</string>
+    <string name="editor_text_game_4">Zvoľ zvieratá pre obe strany. Nezabudni, že počet zvierat spolu s maskami môže byť najviac 10. Musíš použiť obe masky, pričom každú z nich najviac 2 krát. </string>
     <string name="editor_title_game_1">Vytváraš vlastnú úlohu pre hru <b>Kto vyhrá?</b></string>
     <string name="editor_title_game_2">Vytváraš vlastnú úlohu pre hru <b>Kto chýba?</b></string>
     <string name="editor_title_game_3">Vytváraš vlastnú úlohu pre hru <b>Ohrady </b></string>

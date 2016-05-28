@@ -127,7 +127,7 @@
         <view
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            class="com.example.beebzb.bakalarka.MyCanvas"
+            class="com.example.beebzb.bakalarka.entity.MyCanvas"
             android:id="@+id/view" />
     </LinearLayout>
 

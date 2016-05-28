@@ -6,28 +6,33 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 
-import com.example.beebzb.bakalarka.enums.Animal;
-import com.example.beebzb.bakalarka.enums.Operation;
+import com.example.beebzb.bakalarka.entity.enums.Animal;
+import com.example.beebzb.bakalarka.entity.enums.Operation;
 
 
 public class Circle {
-    private int image = -1;
     private Paint pnt;
     private double dx, dy, dragX, dragY;
-    private int value;
+    public static final int DEFAULT_CIRCLE_VALUE = -1;
+    private int value = DEFAULT_CIRCLE_VALUE;
     public float x;
     public float y;
     public float radius = 60;
-    public static final float radius_empty = 70;
-    public static final float radius_normal = 60;
+    public static final float radius_empty = 50;
+    public static final float radius_normal = 40;
     public boolean isStatic = false;
     private boolean isOccupied = false;
     private Animal animal;
-    private Operation operation;
+    private Operation operation = null;
+
+    private int sideIndex = -1;
+    public static final int LEFT_SIDE_INDEX = 0;
+    public static final int RIGHT_SIDE_INDEX = 1;
+    public static final int MIDDLE_INDEX = 2;
 
     private Context context;
 
-    public static final int LEAVE = -1;
+    public static final int LEAVE = -100;
 
     public Circle(int x, int y, boolean staticState, Context context, Animal animal, Operation operation) {
         this.context = context;
@@ -43,9 +48,21 @@ public class Circle {
         if (animal == Animal.EMPTY || animal == Animal.EMPTY2 || operation == Operation.EMPTY){
             this.radius = radius_empty;
         }
-
-
     }
+
+    public Circle(int x, int y, int radius, Context context, Animal animal) {
+        this.context = context;
+        this.x = x;
+        this.animal = animal;
+        this.y = y;
+        this.isStatic = true;
+        this.dragX = 0;
+        this.dragY = 0;
+        this.radius = radius;
+        this.pnt = new Paint(Paint.ANTI_ALIAS_FLAG);
+    }
+
+
 
     public void draw(Canvas canvas) {
         if (operation != null) {
@@ -69,6 +86,8 @@ public class Circle {
         this.x = Math.round(this.x - this.dragX - this.dx / 2);
         this.y = Math.round(this.y - this.dragY - this.dy / 2);
     }
+
+
 
     public void updateDragForce(int dgx, int dgy, double dt) {
         this.dragX = dgx;
@@ -110,8 +129,28 @@ public class Circle {
         return operation;
     }
 
+    public void setOccupied(boolean state) {
+        this.isOccupied = state;
+    }
+
+    public boolean isOccupied() {return this.isOccupied;}
+
     public Animal getAnimal() {
         return animal;
+    }
+
+    public int getSideIndex() {
+        return sideIndex;
+    }
+
+    public void setSideIndex(int index){
+        if (isStatic) {
+            sideIndex = index;
+        }
+    }
+
+    public float getRadius() {
+        return radius;
     }
 }
 

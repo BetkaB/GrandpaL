@@ -1,4 +1,4 @@
-package com.example.beebzb.bakalarka.enums;
+package com.example.beebzb.bakalarka.entity.enums;
 
 import com.example.beebzb.bakalarka.R;
 

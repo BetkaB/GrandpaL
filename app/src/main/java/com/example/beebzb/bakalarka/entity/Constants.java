@@ -1,6 +1,8 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.entity;
 
 import android.graphics.drawable.Drawable;
+
+import com.example.beebzb.bakalarka.R;
 
 public class Constants {
     public static final int[] levelIcons = new int[]{R.drawable.level1,R.drawable.level2, R.drawable.level3};

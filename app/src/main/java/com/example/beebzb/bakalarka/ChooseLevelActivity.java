@@ -17,6 +17,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.beebzb.bakalarka.entity.Constants;
+import com.example.beebzb.bakalarka.fragments.EditorGame1Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame2Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame3Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame4Fragment;
 import com.example.beebzb.bakalarka.layout.MenuImageButton;
 
 
@@ -54,6 +59,7 @@ public class ChooseLevelActivity extends MyActivity {
 
 
     private ArrayList<MenuImageButton> buttons = new ArrayList<MenuImageButton>();
+    public static  final String DEFAULT_PROGRESS = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +87,6 @@ public class ChooseLevelActivity extends MyActivity {
             }
         });
 
-        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt(PROGRESS_GAME_3, 4).commit();
-        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt(PROGRESS_GAME_4, 4).commit();
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -119,7 +123,7 @@ public class ChooseLevelActivity extends MyActivity {
         absoluteLayout.addView(middle);
 
         play = new Button(this);
-        lp = new AbsoluteLayout.LayoutParams(size, size / 3, (int) centerX - (size / 2), (int) (centerY + (size / 2) - 25));
+        lp = new AbsoluteLayout.LayoutParams(size, size / 4, (int) centerX - (size / 2), (int) (centerY + (size / 2) - 25));
         play.setLayoutParams(lp);
         play.setText(getResources().getString(R.string.play));
         absoluteLayout.addView(play);
@@ -241,31 +245,26 @@ public class ChooseLevelActivity extends MyActivity {
         }
     }
 
-    public String getKeyByChosenLevel() {
-        String key = "";
+    public static String getKeyByChosenLevel(int chosen_level) {
         switch (chosen_level) {
             case 1:
-                key = EditorGame1Fragment.SAVED_TASK_GAME1;
-                break;
+                return EditorGame1Fragment.SAVED_TASK_GAME1;
             case 2:
-                key = EditorGame2Fragment.SAVED_TASK_GAME2;
-                break;
+                return EditorGame2Fragment.SAVED_TASK_GAME2;
             case 3:
-                key = EditorGame3Fragment.SAVED_TASK_GAME3;
-                break;
+                return EditorGame3Fragment.SAVED_TASK_GAME3;
             case 4:
-                // TODO change to editorGame4Fragment.SAVED_TASK_GAME4 when created ....
-                key = EditorGame3Fragment.SAVED_TASK_GAME3;
-                break;
+                return EditorGame4Fragment.SAVED_TASK_GAME4;
+            default:
+                return EditorActivity.DEFAULT_TASK;
         }
-        return key;
     }
 
     private boolean displayPlayButton() {
         SharedPreferences mPrefs = getPreferences(Context.MODE_PRIVATE);
         String key;
         if (chosen_game == GAME_CUSTOM) {
-            key = getKeyByChosenLevel();
+            key = getKeyByChosenLevel(chosen_level);
             String savingRes = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString(key, NOT_SAVED);
             if (savingRes.equals(NOT_SAVED)) {
                 return false;
@@ -292,9 +291,8 @@ public class ChooseLevelActivity extends MyActivity {
                 return PROGRESS_GAME_3;
             case GAME4:
                 return PROGRESS_GAME_4;
-
         }
-        return "default";
+        return DEFAULT_PROGRESS;
 
     }
 

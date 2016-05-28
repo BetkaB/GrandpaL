@@ -1,21 +1,16 @@
 package com.example.beebzb.bakalarka;
 
-import android.annotation.TargetApi;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import com.example.beebzb.bakalarka.entity.Constants;
+import com.example.beebzb.bakalarka.layout.MyDialog;
 
 import java.util.HashMap;
 

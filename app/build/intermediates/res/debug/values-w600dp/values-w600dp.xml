@@ -3,5 +3,35 @@
     <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-w600dp/values-w600dp.xml -->
     <eat-comment/>
     <dimen name="abc_search_view_text_min_width">192dip</dimen>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values-w600dp/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_choose_level_abs_top_bottom">5dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="arrows_side_padding">10dp</dimen>
+    <dimen name="dialog_buttons_side_margin">30dp</dimen>
+    <dimen name="dialog_buttons_side_padding">20dp</dimen>
+    <dimen name="dialog_elements_margin_bottom">15dp</dimen>
+    <dimen name="dialog_info_font_size">24sp</dimen>
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_title_font_size">22sp</dimen>
+    <dimen name="editor_fragment_inner_padding">10dp</dimen>
+    <dimen name="editor_fragment_radius_empty_animal">90dp</dimen>
+    <dimen name="editor_fragment_radius_icons">70dp</dimen>
+    <dimen name="info_row_height">160dp</dimen>
+    <dimen name="info_row_title_bottom_margin">10dp</dimen>
+    <dimen name="info_row_title_top_margin">15dp</dimen>
+    <dimen name="left_menu_buttons_margin">2dp</dimen>
+    <dimen name="left_menu_leave_bottom">10dp</dimen>
+    <dimen name="left_menu_width">90dp</dimen>
+    <dimen name="menu_buttons_radius">150px</dimen>
+    <dimen name="menu_buttons_size">120px</dimen>
+    <dimen name="middle_button_top_padding">40px</dimen>
+    <dimen name="score_row_height">90dp</dimen>
+    <dimen name="score_row_margin_left_and_right">140dp</dimen>
+    <dimen name="screen_title_bottom_margin">20dp</dimen>
+    <dimen name="screen_title_top_margin">7dp</dimen>
+    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-w600dp/values-w600dp.xml -->
+    <eat-comment/>
     <integer name="abc_max_action_buttons">5</integer>
 </resources>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/leftMenu"
     android:orientation="horizontal"
-    tools:context="com.example.beebzb.bakalarka.layout.LeftMenuSimpleFragment">
+    tools:context="com.example.beebzb.bakalarka.fragments.LeftMenuSimpleFragment">
 
     <ImageButton
         android:id="@+id/leaveBtn"

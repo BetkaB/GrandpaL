@@ -1,4 +1,4 @@
-package com.example.beebzb.bakalarka;
+package com.example.beebzb.bakalarka.layout;
 
 
 import android.app.Dialog;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.beebzb.bakalarka.R;
 
 
 public class MyDialog extends Dialog {

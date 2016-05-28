@@ -6,7 +6,7 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:name="com.example.beebzb.bakalarka.layout.LeftMenuSimpleFragment"
+        android:name="com.example.beebzb.bakalarka.fragments.LeftMenuSimpleFragment"
         android:id="@+id/fragment" />
 
     <LinearLayout
@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/fragment"
-        android:layout_toEndOf="@+id/fragment">
+        android:layout_toEndOf="@+id/fragment"
+        android:gravity="center">
 
     <TextView style="@style/ScreenTitle"
         android:text="@string/title_activity_create_level"

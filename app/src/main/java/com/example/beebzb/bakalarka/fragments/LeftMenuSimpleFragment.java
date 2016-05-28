@@ -1,4 +1,4 @@
-package com.example.beebzb.bakalarka.layout;
+package com.example.beebzb.bakalarka.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;

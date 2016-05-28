@@ -51,7 +51,7 @@ public class PopUp {
         // text paint settings
         this.textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         this.textPaint.setColor(Color.WHITE);
-        this.textPaint.setTextSize(44);
+        this.textPaint.setTextSize(36);
         Rect bounds = new Rect();
         this.textPaint.getTextBounds(correctAnswer, 0, correctAnswer.length(), bounds);
         this.textX = this.x - (bounds.width()/2);

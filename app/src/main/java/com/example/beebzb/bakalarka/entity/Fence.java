@@ -4,7 +4,6 @@ package com.example.beebzb.bakalarka.entity;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import com.example.beebzb.bakalarka.MyCanvas;
 
 public class Fence {
     private boolean isReady = false;

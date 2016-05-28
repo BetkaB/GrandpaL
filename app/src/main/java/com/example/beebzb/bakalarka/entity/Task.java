@@ -2,18 +2,19 @@ package com.example.beebzb.bakalarka.entity;
 
 import android.graphics.Canvas;
 
-import com.example.beebzb.bakalarka.MyCanvas;
-import com.example.beebzb.bakalarka.enums.Animal;
-import com.example.beebzb.bakalarka.enums.Operation;
+import com.example.beebzb.bakalarka.entity.enums.Animal;
+import com.example.beebzb.bakalarka.entity.enums.Operation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Task {
     private ArrayList<Animal> leftSide = new ArrayList<Animal>();
     private ArrayList<Animal> rightSide = new ArrayList<Animal>();
     private Operation operation;
     private final int chosenGame;
+    private final int chosenLevel;
 
     private ArrayList<Circle> circles;
     private ArrayList<Circle> staticCircles = new ArrayList<Circle>();
@@ -24,15 +25,22 @@ public class Task {
 
     // useful for third game
     private Fence fence;
-    //Circle[][] staticCirclesThirdGame = new Circle[][];
+    private ArrayList<Animal> leftPlace = new ArrayList<>();
+    private ArrayList<Animal> middlePlace = new ArrayList<>();
+    private ArrayList<Animal> rightPlace = new ArrayList<>();
     private HashMap<Animal, Integer> animalMap = null;
 
     // useful for fourth game Boolean onLeftSide
-    private HashMap <Animal, Boolean> variable_x;
-    private HashMap <Animal, Boolean> variable_y;
+    private HashSet<Animal> variable_y;
+    private HashSet<Animal> variable_x;
+
+    public int getChosenLevel() {
+        return chosenLevel;
+    }
 
     public Task(int chosenGame, int level) {
         this.chosenGame = chosenGame;
+        this.chosenLevel = level;
 
         if (this.chosenGame == 3)
             this.fence = new Fence(level);
@@ -113,14 +121,19 @@ public class Task {
         final int radius = (int) Circle.radius_normal;
         int total_width = totalCircles * (2 * radius + padding);
         int startX = x - (total_width / 2) + (radius / 2);
+        Circle tempCircle;
         for (Animal animal : leftSide) {
             if (animal == Animal.EMPTY || animal == Animal.EMPTY2) {
-                staticCircles.add(new Circle(startX, y, true, GameHandler.context, animal, null));
-            }
-            else {
+                tempCircle = new Circle(startX, y, true, GameHandler.context, animal, null);
+                tempCircle.setSideIndex(Circle.LEFT_SIDE_INDEX);
+                staticCircles.add(tempCircle);
+                startX += (2 * Circle.radius_empty) + padding;
+
+            } else {
                 circles.add(new Circle(startX, y, true, GameHandler.context, animal, null));
+                startX += (2 * Circle.radius_normal) + padding;
             }
-            startX += (2 * Circle.radius_normal) + padding;
+
 
         }
         if (getOperation() == Operation.EMPTY) {
@@ -133,11 +146,16 @@ public class Task {
 
         for (Animal animal : rightSide) {
             if (animal == Animal.EMPTY || animal == Animal.EMPTY2) {
-                staticCircles.add(new Circle(startX, y, true, GameHandler.context, animal, null));
+                tempCircle = new Circle(startX, y, true, GameHandler.context, animal, null);
+                tempCircle.setSideIndex(Circle.RIGHT_SIDE_INDEX);
+                staticCircles.add(tempCircle);
+                startX += (2 * Circle.radius_empty) + padding;
+
             } else {
                 circles.add(new Circle(startX, y, true, GameHandler.context, animal, null));
+                startX += (2 * Circle.radius_normal) + padding;
             }
-            startX += (2 * Circle.radius_normal) + padding;
+
         }
 
     }
@@ -158,7 +176,7 @@ public class Task {
     @Override
     public String toString() {
         if (chosenGame == 3) {
-            return "Task "  + animalMap.toString();
+            return "Task " + animalMap.toString();
         }
         return "Task{" +
                 ", leftSide=" + leftSide +
@@ -202,12 +220,25 @@ public class Task {
 
         int x = fence.getLeft() + radius;
         int y = fence.getTop() + bottomTopPadding + radius;
+        Circle tempCircle;
+        int index = -1;
 
         for (int i = 0; i < fence.getParts(); i++) {
             x = fence.getLeft() + (oneFenceWidth * i) + sidePadding + radius;
             y = fence.getTop() + bottomTopPadding + radius;
+            if (i == 0) {
+                index = Circle.LEFT_SIDE_INDEX;
+            }
+            if (i == 1) {
+                index = (fence.getParts() == 2) ? Circle.RIGHT_SIDE_INDEX : Circle.MIDDLE_INDEX;
+            }
+            if (i == 2) {
+                index = Circle.RIGHT_SIDE_INDEX;
+            }
             for (int j = 0; j < NUMBER_OF_STATIC_CIRCLES_INSIDE_ONE_FENCE; j++) {
-                staticCircles.add(new Circle(x, y, true, GameHandler.context, Animal.EMPTY, null));
+                tempCircle = new Circle(x, y, (int) Circle.radius_empty, GameHandler.context, Animal.EMPTY_INVISIBLE);
+                tempCircle.setSideIndex(index);
+                staticCircles.add(tempCircle);
                 x += +(2 * radius);
                 if (j % 3 == 2) {
                     y += +2 * radius;
@@ -216,6 +247,57 @@ public class Task {
             }
         }
     }
+
+    public Fence getFence() {
+        return fence;
+    }
+
+    public void clearPlaces() {
+        rightPlace = new ArrayList<>();
+        middlePlace = new ArrayList<>();
+        leftPlace = new ArrayList<>();
+    }
+
+    public void addAnimalToRightPlace(Animal animal) {
+        rightPlace.add(animal);
+    }
+
+    public void addAnimalToMiddlePlace(Animal animal) {
+        middlePlace.add(animal);
+    }
+
+    public void addAnimalToLeftPlace(Animal animal) {
+        leftPlace.add(animal);
+    }
+
+    public ArrayList<Animal> getLeftPlace() {
+        return leftPlace;
+    }
+
+    public ArrayList<Animal> getMiddlePlace() {
+        return middlePlace;
+    }
+
+    public ArrayList<Animal> getRightPlace() {
+        return rightPlace;
+    }
+
+    public HashSet<Animal> getVariable_y() {
+        return variable_y;
+    }
+
+    public void setVariable_y(HashSet<Animal> variable_y) {
+        this.variable_y = variable_y;
+    }
+
+    public HashSet<Animal> getVariable_x() {
+        return variable_x;
+    }
+
+    public void setVariable_x(HashSet<Animal> variable_x) {
+        this.variable_x = variable_x;
+    }
+
 
 }
 

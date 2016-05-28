@@ -24,36 +24,43 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/title" />
 
-        <ImageButton style="@style/MainMenuRow"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/playBtn"
-            android:src="@drawable/play"
-            android:onClick="openActivity" />
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-        <ImageButton style="@style/MainMenuRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/createBtn"
-            android:src="@drawable/edit"
-            android:onClick="openActivity"
+            <ImageButton style="@style/MainMenuRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/playBtn"
+                android:src="@drawable/play"
+                android:onClick="openActivity" />
+
+            <ImageButton style="@style/MainMenuRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/createBtn"
+                android:src="@drawable/edit"
+                android:onClick="openActivity"
+                />
+
+            <ImageButton style="@style/MainMenuRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scoreBtn"
+                android:src="@drawable/score"
+                android:onClick="openActivity"
+               />
+
+            <ImageButton style="@style/MainMenuRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leaveBtn"
+                android:src="@drawable/leave"
+                android:onClick="closeApplication"
             />
-
-        <ImageButton style="@style/MainMenuRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/scoreBtn"
-            android:src="@drawable/score"
-            android:onClick="openActivity"
-           />
-
-        <ImageButton style="@style/MainMenuRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/leaveBtn"
-            android:src="@drawable/leave"
-            android:onClick="closeApplication"
-        />
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

@@ -2,18 +2,21 @@ package com.example.beebzb.bakalarka.entity;
 
 import android.util.Log;
 
-import com.example.beebzb.bakalarka.enums.Animal;
-import com.example.beebzb.bakalarka.enums.Operation;
+import com.example.beebzb.bakalarka.entity.enums.Animal;
+import com.example.beebzb.bakalarka.entity.enums.Operation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Random;
 
 public class Generator {
     private final int MAX_OF_CIRCLES_IN_FIRST_SECOND_LEVEL = 6;
     public static final int MAX_OF_CIRCLES_IN_THIRD_LEVEL = 10;
-    public static final int GAME_3_MAX_OF_CIRCLES_LEVEL_3 = 18;
-    public static final int GAME_3_MAX_OF_CIRCLES_LEVEL_1_2 = 12;
+
+    // third game constants
+    public static final int GAME_3_MAX_OF_CIRCLES_LEVEL_3 = 10;
+    public static final int GAME_3_MAX_OF_CIRCLES_LEVEL_1_2 = 6;
 
     // fourth game constants
     public static final int GAME_4_MAX_OF_VARIABLE_LEVEL_2_3 = 2;
@@ -22,6 +25,7 @@ public class Generator {
     public static final int GAME_4_MAX_OF_VARIABLE_LEVEL_1 = 2;
     public static final int GAME_4_MIN_OF_VARIABLE_LEVEL_1 = 2;
 
+    public static final int GAME_4_MIN_OF_ANIMALS = 3;
 
 
     private int chosenGame = -1;
@@ -51,10 +55,10 @@ public class Generator {
     private ArrayList<Task> generateTasksGame_4(int number_of_tasks) {
         ArrayList<Task> tasks = new ArrayList<Task>();
         Solver solver = new Solver(4);
-        while (number_of_tasks != 0){
+        while (number_of_tasks != 0) {
             Task task = generateTaskGame_4(chosenLevel);
-            int solutions = solver.getNumberOfSolutionGame_4(task, chosenLevel==3);
-            if (solutions > 0 && solutions <= 5){
+            int solutions = solver.getNumberOfSolutionGame_4(task, chosenLevel == 3);
+            if (solutions > 0 && solutions <= 5) {
                 tasks.add(task);
                 number_of_tasks--;
             }
@@ -64,7 +68,7 @@ public class Generator {
     }
 
     private Task generateTaskGame_4(int chosenLevel) {
-        Random random =  new Random();
+        Random random = new Random();
         Task task = new Task(chosenGame, chosenLevel);
         task.setOperation(Operation.EQUAL);
         int max_of_circles = (chosenLevel == 3) ? MAX_OF_CIRCLES_IN_THIRD_LEVEL : MAX_OF_CIRCLES_IN_FIRST_SECOND_LEVEL;
@@ -75,38 +79,34 @@ public class Generator {
         int leftSide = random.nextInt(numberOfCircles);
         int rightSide = numberOfCircles - leftSide;
 
-        for (int x = 0; x < numberOfVariableX; x++){
-            if (random.nextBoolean()){
+        for (int x = 0; x < numberOfVariableX; x++) {
+            if (random.nextBoolean()) {
                 task.addToLeftSide(Animal.EMPTY);
                 leftSide--;
-            }
-            else {
+            } else {
                 task.addToRightSide(Animal.EMPTY);
                 rightSide--;
             }
-
         }
 
-        for (int y = 0; y < numberOfVariableY; y++){
-            if (random.nextBoolean()){
+        for (int y = 0; y < numberOfVariableY; y++) {
+            if (random.nextBoolean()) {
                 task.addToLeftSide(Animal.EMPTY2);
                 leftSide--;
-            }
-            else {
+            } else {
                 task.addToRightSide(Animal.EMPTY2);
                 rightSide--;
             }
-
         }
 
-        for (int l = 0; l < leftSide; l++){
+        for (int l = 0; l < leftSide; l++) {
             task.addToLeftSide(Animal.getRandomAnimalBasedOnLevel(chosenLevel));
         }
-        for (int r = 0; r < rightSide; r++){
+        for (int r = 0; r < rightSide; r++) {
             task.addToRightSide(Animal.getRandomAnimalBasedOnLevel(chosenLevel));
         }
 
-        Log.e("GENERATOR",task.toString());
+        Log.e("GENERATOR", task.toString());
         return task;
     }
 
@@ -132,14 +132,15 @@ public class Generator {
         return random.nextInt((max - min) + 1) + min;
     }
 
-    private ArrayList<Task> generateTasksGame_3(int number_of_tasks) {
+    public ArrayList<Task> generateTasksGame_3(int number_of_tasks) {
         Random random = new Random();
-        int maxOfAnimals = (chosenLevel == 1) ? GAME_3_MAX_OF_CIRCLES_LEVEL_1_2 : GAME_3_MAX_OF_CIRCLES_LEVEL_3;
+        int maxOfAnimals = (chosenLevel != 3) ? GAME_3_MAX_OF_CIRCLES_LEVEL_1_2 : GAME_3_MAX_OF_CIRCLES_LEVEL_3;
         int minOfAnimals = 3;
-
+        Solver solver = new Solver(chosenGame);
         ArrayList<Task> tasks = new ArrayList<Task>();
 
-        for (int t = 0; t < number_of_tasks; t++) {
+        int i = 0;
+        while (i != number_of_tasks) {
             HashMap<Animal, Integer> animalMap = new HashMap<>();
             Task task = new Task(chosenGame, chosenLevel);
             int numberOfAnimal = random.nextInt((maxOfAnimals - minOfAnimals) + 1) + minOfAnimals;
@@ -153,9 +154,59 @@ public class Generator {
             }
             Log.e("DEBUG_3_GAME", "animal map  " + animalMap.toString());
             task.setAnimalMap(animalMap);
-            tasks.add(task);
+            int solutions = solver.getNumberOfSolutionGame_3(task);
+            if (solutions > 0) {
+                Log.e("DEBUG_3_GAME","PRIDANY "+task.toString());
+                tasks.add(task);
+                i++;
+            }
         }
         return tasks;
+    }
+
+    public void generate_Task_game_3_level_3(){
+        int safe_animal_limit = 7;
+        // Creates random 7 animals
+        HashMap<Animal, Integer> animalMap = new HashMap<>();
+        for (int i = 0; i < safe_animal_limit; i++) {
+            Animal animal = Animal.getRandomAnimalBasedOnLevel(chosenLevel);
+            if (animalMap.containsKey(animal)) {
+                animalMap.put(animal, animalMap.get(animal) + 1);
+            } else {
+                animalMap.put(animal, 1);
+            }
+        }
+        // Find 2 biggest
+        Animal firstMax = null;
+        Animal secondMax = null;
+        Iterator it = animalMap.entrySet().iterator();
+        while (it.hasNext()) {
+            HashMap.Entry pair = (HashMap.Entry) it.next();
+            Animal tempAnimal = (Animal)pair.getKey();
+            // First initialization
+            if (firstMax == null) {
+                firstMax = tempAnimal;
+            } else if (secondMax == null) {
+                // Compare
+                if (firstMax.ordinal() < tempAnimal.ordinal()) {
+                    // Switch
+                    secondMax = firstMax;
+                    firstMax = tempAnimal;
+                } else {
+                    secondMax = tempAnimal;
+                }
+            } else {
+                // Compare
+                if (firstMax.ordinal() < tempAnimal.ordinal()) {
+                    secondMax = firstMax;
+                    firstMax = tempAnimal;
+                } else if (secondMax.ordinal() < tempAnimal.ordinal()) {
+                    secondMax = tempAnimal;
+                }
+            }
+
+        }
+
     }
 
     public ArrayList<Task> generateTasksGame_1(int number_of_tasks) {
@@ -197,7 +248,7 @@ public class Generator {
         boolean useAllAnimals = chosenLevel == 3;
         while (totalCount != number_of_tasks) {
             Task task = generateTaskGame_2(chosenLevel);
-            int solutions = solver.getNumberOfSolutionGame_1_2(task, useAllAnimals);
+            int solutions = solver.getNumberOfSolutionGame_2(task, useAllAnimals);
             if (solutions >= 1) {
                 Log.e("GENERATOR", "2 game with " + solutions + " solutions " + task.toString());
                 tasks.add(task);

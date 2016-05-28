@@ -13,6 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.beebzb.bakalarka.entity.Constants;
+import com.example.beebzb.bakalarka.fragments.EditorGame1Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame2Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame3Fragment;
+import com.example.beebzb.bakalarka.fragments.EditorGame4Fragment;
+
 public class EditorActivity extends MyActivity {
 
     // -------- buttons left menu -----------
@@ -38,7 +44,9 @@ public class EditorActivity extends MyActivity {
     EditorGame1Fragment editorGame1Fragment;
     EditorGame2Fragment editorGame2Fragment;
     EditorGame3Fragment editorGame3Fragment;
+    EditorGame4Fragment editorGame4Fragment;
 
+    public static final String DEFAULT_TASK = "default";
 
 
     @Override
@@ -67,7 +75,7 @@ public class EditorActivity extends MyActivity {
         // init constants
         colorStr = Constants.gameColors[chosenGame - 1];
         selectorIndex = chosenGame - 1;
-        gameName = getResources().getString(Constants.editorTitle[chosenGame-1]);
+        gameName = getResources().getString(Constants.editorTitle[chosenGame - 1]);
 
         setSelector();
 
@@ -77,12 +85,13 @@ public class EditorActivity extends MyActivity {
 
         gameInfo = getResources().getString(Constants.editorText[chosenGame - 1]);
 
-        showLevelInfo(gameName, gameInfo, Constants.gameIcons[chosenGame-1]);
+        showLevelInfo(gameName, gameInfo, Constants.gameIcons[chosenGame - 1]);
 
         // init fragments
         editorGame1Fragment = (EditorGame1Fragment) getFragmentManager().findFragmentById(R.id.editorGame1);
         editorGame2Fragment = (EditorGame2Fragment) getFragmentManager().findFragmentById(R.id.editorGame2);
         editorGame3Fragment = (EditorGame3Fragment) getFragmentManager().findFragmentById(R.id.editorGame3);
+        editorGame4Fragment = (EditorGame4Fragment) getFragmentManager().findFragmentById(R.id.editorGame4);
 
 
         displayFragment();
@@ -90,12 +99,13 @@ public class EditorActivity extends MyActivity {
 
     private void displayFragment() {
         FragmentManager fm = getFragmentManager();
-        switch (chosenGame){
+        switch (chosenGame) {
             case 1:
                 fm.beginTransaction()
                         .show(editorGame1Fragment)
                         .hide(editorGame2Fragment)
                         .hide(editorGame3Fragment)
+                        .hide(editorGame4Fragment)
                         .commit();
                 break;
             case 2:
@@ -103,6 +113,7 @@ public class EditorActivity extends MyActivity {
                         .show(editorGame2Fragment)
                         .hide(editorGame1Fragment)
                         .hide(editorGame3Fragment)
+                        .hide(editorGame4Fragment)
                         .commit();
                 break;
             case 3:
@@ -110,6 +121,15 @@ public class EditorActivity extends MyActivity {
                         .show(editorGame3Fragment)
                         .hide(editorGame1Fragment)
                         .hide(editorGame2Fragment)
+                        .hide(editorGame4Fragment)
+                        .commit();
+                break;
+            case 4:
+                fm.beginTransaction()
+                        .show(editorGame4Fragment)
+                        .hide(editorGame1Fragment)
+                        .hide(editorGame2Fragment)
+                        .hide(editorGame3Fragment)
                         .commit();
                 break;
 
@@ -171,8 +191,8 @@ public class EditorActivity extends MyActivity {
         this.helpImageView.setVisibility(View.VISIBLE);
     }
 
-    public void save(View view){
-        switch (chosenGame){
+    public void save(View view) {
+        switch (chosenGame) {
             case 1:
                 editorGame1Fragment.onSaveClicked();
                 break;
@@ -181,6 +201,9 @@ public class EditorActivity extends MyActivity {
                 break;
             case 3:
                 editorGame3Fragment.onSaveClicked();
+                break;
+            case 4:
+                editorGame4Fragment.onSaveClicked();
                 break;
         }
 
