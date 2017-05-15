@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="game_1_text">
         <item>Vyber znamienko a vyjadri tak či sú obe strany rovnako silné.</item>
@@ -28,7 +28,7 @@
         <item>Teraz hráš vlastný level pre hru <b>Ohrady</b>. Rozdeľ zvieratá tak, aby boli v ohradách rovnako silné skupiny.</item>
         <item>Teraz hráš vlastný level pre hru <b>Dve stratené zvieratá</b>. Uhádni aké zvieratá sa skrývajú za maskami.</item>
     </string-array>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -60,7 +60,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="debugging">#9def00f0</color>
     <color name="dialog_bg">#444444</color>
@@ -68,36 +68,36 @@
     <color name="dialog_stroke">#80444444</color>
     <color name="dialog_title_text_color_negative">#ffa10800</color>
     <color name="dialog_title_text_color_positive">#ff37a13e</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="first_game">#FFC3AE</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="fourth_game">#FEF8A0</color>
     <color name="game_3_fences_stroke_color">#444444</color>
     <color name="game_activity_pop_up_bg">#444444</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="infoRowTitle">#444444</color>
     <color name="leftMenu">#444444</color>
     <color name="leftMenuStroke">#444444</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
@@ -111,10 +111,10 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="primaryText">#444444</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
@@ -124,19 +124,19 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="progressBarEmpty">#ffffffff</color>
     <color name="progressBarStroke">#444444</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="screenTitle">#444444</color>
     <color name="second_game">#CBE8BA</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
@@ -146,7 +146,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="third_game">#C9F1FD</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -177,7 +177,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -269,7 +269,7 @@
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <plurals name="number_of_solutions">
         <item quantity="one">Táto úloha má %d riešenie.</item>
@@ -281,7 +281,7 @@
         <item quantity="few">Táto úloha má minimálne %d riešenia.</item>
         <item quantity="other">Táto úloha má minimálne %d riešení.</item>
     </plurals>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -302,7 +302,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Zvieratá deda Lesoňa</string>
@@ -356,10 +356,10 @@
     <string name="pre_editor_dialog_cannot_create_task_info">Najskôr musíš prejsť všetky 3 úrovne vybratej hry.</string>
     <string name="pre_editor_dialog_cannot_create_task_title">Nemôžeš vytvoriť vlastnú úlohu</string>
     <string name="score">Body</string>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_choose_level">~ Vyber si hru a úroveň, ktorú chceš hrať ~</string>
     <string name="title_activity_create_level">~ Tu si môžeš vytvoriť vlastnú úlohu pre každú hru ~</string>
@@ -368,18 +368,18 @@
     <string name="title_activity_game_activity2">GameActivity2</string>
     <string name="title_activity_my">MyActivity</string>
     <string name="title_activity_score">~ Skóre ~</string>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1316,7 +1316,7 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="CreateLevelRow">
         <item name="android:padding">6dp</item>
@@ -1406,7 +1406,7 @@
         <item name="android:background">@drawable/rounded_row</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1506,12 +1506,12 @@
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Spinner"/>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ResultsButton" parent="LeftMenuButton">
         <item name="android:src">@drawable/help</item>
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="Base.DialogWindowTitle.AppCompat">
     </style>
@@ -1559,7 +1559,7 @@
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ScoreGameName" parent="ScoreText">
         <item name="android:layout_marginLeft">10dp</item>
@@ -1587,7 +1587,7 @@
         <item name="android:layout_marginBottom">@dimen/screen_title_bottom_margin</item>
         <item name="android:textSize">35sp</item>
     </style>
-    <!-- From: file:/C:/Users/Betka/AndroidStudioProjects/Bakalarka%203/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Betka/Documents/GitHub/GrandpaL/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
