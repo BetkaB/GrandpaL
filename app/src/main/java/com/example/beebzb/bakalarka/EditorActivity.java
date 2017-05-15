@@ -19,6 +19,8 @@ import com.example.beebzb.bakalarka.fragments.EditorGame2Fragment;
 import com.example.beebzb.bakalarka.fragments.EditorGame3Fragment;
 import com.example.beebzb.bakalarka.fragments.EditorGame4Fragment;
 
+import butterknife.ButterKnife;
+
 public class EditorActivity extends MyActivity {
 
     // -------- buttons left menu -----------
@@ -53,8 +55,6 @@ public class EditorActivity extends MyActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
-
-
         // -------- buttons left menu -----------
         infoBtn = (ImageButton) findViewById(R.id.infoBtn);
         helpBtn = (ImageButton) findViewById(R.id.helpBtn);
